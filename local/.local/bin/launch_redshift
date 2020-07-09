@@ -1,0 +1,10 @@
+#!/bin/sh
+
+# Terminates already running redshift instance
+killall -q redshift
+
+# Wait until the processes have been shut down
+while pgrep -u $UID -x redshift >/dev/null; do sleep 1; done
+
+# Launch redshift, using default config ~/.config/redshift/redshift.conf
+redshift &
