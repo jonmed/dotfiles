@@ -1,3 +1,0 @@
-[submodule "config/.config/mpv/scripts/mpvSockets"]
-	path = config/.config/mpv/scripts/mpvSockets
-	url = https://github.com/wis/mpvSockets
