@@ -119,5 +119,7 @@ if ! shopt -oq posix; then
 fi
 
 # Windows X Server
-export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2; exit;}'):0.0
-export LIBGL_ALWAYS_INDIRECT=1
+if uname -a | grep -q '^Linux.*Microsoft'; then
+    export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2; exit;}'):0.0
+    export LIBGL_ALWAYS_INDIRECT=1
+fi
