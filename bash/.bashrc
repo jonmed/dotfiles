@@ -60,7 +60,7 @@ PROMPT_DIRTRIM=3
 if [ "$color_prompt" = yes ]; then
     PS1='${debian_chroot:+($debian_chroot)}\[\033[01;36m\]\w\[\033[00m\]\n\[\033[01;32m\]>\[\033[00m\] '
 else
-    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
+    PS1='${debian_chroot:+($debian_chroot)}\w\n> '
 fi
 unset color_prompt force_color_prompt
 
