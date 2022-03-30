@@ -8,7 +8,6 @@ call plug#begin()
 
 Plug 'lifepillar/vim-gruvbox8'
 Plug 'nathom/filetype.nvim'
-Plug 'tpope/vim-fugitive'
 
 call plug#end()
 
