@@ -60,7 +60,7 @@ set tabstop=4
 set ignorecase
 set path+=**
 set smartcase
-set wildignore+=*.pyc
+set wildignore+=*.pyc,*/venv/*
 set wildignorecase
 
 " Statusline
