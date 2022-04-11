@@ -32,7 +32,7 @@ if has("win32") || has ("wsl")
     \   'cache_enabled': 1,
     \ }
 endif
-set clipboard+=unnamed
+set clipboard+=unnamed,unnamedplus
 
 " Files
 set noswapfile
@@ -53,14 +53,13 @@ set expandtab
 set nowrap
 set shiftround
 set shiftwidth=4
-set softtabstop=4
 set tabstop=4
 
 " Search
 set ignorecase
 set path+=**
 set smartcase
-set wildignore+=*.pyc
+set wildignore+=*.pyc,*/venv/*
 set wildignorecase
 
 " Statusline
@@ -82,5 +81,12 @@ nnoremap x "_x
 nnoremap <silent> <leader>e :Lex 30<cr>
 " Think about using 's' as a leader for splits operations (creating splits and
 " navigating
+
+" Filetype settings
+augroup html
+    au!
+    au FileType html setlocal tabstop=2 shiftwidth=2
+    au FileType htmldjango setlocal tabstop=2 shiftwidth=2
+augroup END
 
 " Plugins Settings
