@@ -37,3 +37,6 @@ if ! pgrep -x "unclutter" > /dev/null
 then
     unclutter -idle 2 &
 fi
+
+# Go
+export PATH=$PATH:/usr/local/go/bin

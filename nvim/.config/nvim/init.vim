@@ -8,6 +8,7 @@ call plug#begin()
 
 Plug 'lifepillar/vim-gruvbox8'
 Plug 'nathom/filetype.nvim'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 call plug#end()
 
@@ -78,7 +79,7 @@ set statusline+=%=\ \ %11.(%l/%L%)\ :\ %-5(%c%V%)
 " Remaps
 noremap <leader>d "_d
 nnoremap x "_x
-nnoremap <silent> <leader>e :Lex 30<cr>
+"nnoremap <silent> <leader>e :Lex 30<cr>
 " Think about using 's' as a leader for splits operations (creating splits and
 " navigating
 
@@ -90,3 +91,53 @@ augroup html
 augroup END
 
 " Plugins Settings
+
+" CoC
+set updatetime=300
+set shortmess+=c
+set cmdheight=2
+set signcolumn=number
+
+inoremap <silent><expr> <c-n> pumvisible() ? "\<c-n>" : coc#refresh()
+inoremap <silent><expr> <c-p> pumvisible() ? "\<c-p>" : coc#refresh()
+
+nmap <silent> [g <Plug>(coc-diagnostic-prev)
+nmap <silent> ]g <Plug>(coc-diagnostic-next)
+
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+
+function! s:show_documentation()
+    if CocAction('hasProvider', 'hover')
+        call CocActionAsync('doHover')
+    else
+        call feedkeys('K', 'in')
+    endif
+endfunction
+
+autocmd CursorHold * silent call CocActionAsync('highlight')
+
+nmap <leader>rn <Plug>(coc-rename)
+
+xmap if <Plug>(coc-funcobj-i)
+omap if <Plug>(coc-funcobj-i)
+xmap af <Plug>(coc-funcobj-a)
+omap af <Plug>(coc-funcobj-a)
+xmap ic <Plug>(coc-classobj-i)
+omap ic <Plug>(coc-classobj-i)
+xmap ac <Plug>(coc-classobj-a)
+omap ac <Plug>(coc-classobj-a)
+
+nnoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-f>"
+nnoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-b>"
+inoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(1)\<cr>" : "\<Right>"
+inoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(0)\<cr>" : "\<Left>"
+vnoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-f>"
+vnoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-b>"
+
+" coc-explorer
+nmap <leader>e <Cmd>CocCommand explorer --toggle --sources=buffer+,file+<cr>
