@@ -60,6 +60,7 @@ set tabstop=4
 set ignorecase
 set path+=**
 set smartcase
+set nohlsearch
 set wildignore+=*.pyc,*/venv/*
 set wildignorecase
 
