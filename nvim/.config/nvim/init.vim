@@ -7,21 +7,14 @@ endif
 call plug#begin()
 
 Plug 'lifepillar/vim-gruvbox8'
-Plug 'dracula/vim', {'as': 'dracula'}
 Plug 'nathom/filetype.nvim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 call plug#end()
 
-" Colorscheme
-augroup DraculaOverrides
-    autocmd!
-    autocmd ColorScheme dracula highlight DraculaComment cterm=italic gui=italic
-augroup end
-
 set termguicolors
 let g:gruvbox_italic = 1
-colorscheme dracula
+colorscheme gruvbox8 
 
 " Speed up startup
 set history=50
