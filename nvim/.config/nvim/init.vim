@@ -7,15 +7,21 @@ endif
 call plug#begin()
 
 Plug 'lifepillar/vim-gruvbox8'
+Plug 'dracula/vim', {'as': 'dracula'}
 Plug 'nathom/filetype.nvim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 call plug#end()
 
 " Colorscheme
+augroup DraculaOverrides
+    autocmd!
+    autocmd ColorScheme dracula highlight DraculaComment cterm=italic gui=italic
+augroup end
+
 set termguicolors
 let g:gruvbox_italic = 1
-colorscheme gruvbox8
+colorscheme dracula
 
 " Speed up startup
 set history=50
@@ -48,6 +54,7 @@ set noshowcmd
 set number
 set splitbelow
 set splitright
+set scrolloff=8
 
 " Formatting
 set expandtab
@@ -80,6 +87,19 @@ set statusline+=%=\ \ %11.(%l/%L%)\ :\ %-5(%c%V%)
 " Remaps
 noremap <leader>d "_d
 nnoremap x "_x
+
+vnoremap < <gv
+vnoremap > >gv
+
+noremap <silent> <expr> j (v:count == 0 ? 'gj' : 'j')
+noremap <silent> <expr> k (v:count == 0 ? 'gk' : 'k')
+
+nnoremap n nzzzv
+nnoremap N Nzzzv
+nnoremap J mzJ`z
+
+cmap w!! %!sudo tee > /dev/null %
+
 "nnoremap <silent> <leader>e :Lex 30<cr>
 " Think about using 's' as a leader for splits operations (creating splits and
 " navigating
@@ -92,6 +112,7 @@ augroup html
 augroup END
 
 " Plugins Settings
+
 
 " CoC
 set updatetime=300
