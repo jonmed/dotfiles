@@ -98,7 +98,8 @@ cmap w!! %!sudo tee > /dev/null %
 " navigating
 
 " Autocommands
-augroup cursor_bar
+augroup restore_terminal_cursor_on_exit
+    autocmd!
     autocmd VimLeave * set guicursor=a:ver25-blinkwait700-blinkoff250-blinkon400
 augroup END
 
