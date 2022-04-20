@@ -1,0 +1,21 @@
+#!/bin/sh
+
+RESULT=""
+
+check() {
+    for d in "$@"; do
+        test -d "$d" -a \! -L "$d" -a "$d" != "venv" || continue
+        cd "$d"
+        if [ -d ".git" ]; then
+            if [ -n "$(git status -s)" ]; then
+                RESULT="${RESULT:+${RESULT}, }$d"
+            fi
+        else
+            check *
+        fi
+        cd ..
+    done
+}
+
+check *
+echo ${RESULT}
