@@ -97,6 +97,11 @@ cmap w!! %!sudo tee > /dev/null %
 " Think about using 's' as a leader for splits operations (creating splits and
 " navigating
 
+" Autocommands
+augroup cursor_bar
+    autocmd VimLeave * set guicursor=a:ver25-blinkwait700-blinkoff250-blinkon400
+augroup END
+
 " Filetype settings
 augroup html
     au!
