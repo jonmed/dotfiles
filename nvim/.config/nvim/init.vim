@@ -91,7 +91,7 @@ nnoremap n nzzzv
 nnoremap N Nzzzv
 nnoremap J mzJ`z
 
-cmap w!! %!sudo tee > /dev/null %
+"cmap w!! %!sudo tee > /dev/null %
 
 "nnoremap <silent> <leader>e :Lex 30<cr>
 " Think about using 's' as a leader for splits operations (creating splits and
