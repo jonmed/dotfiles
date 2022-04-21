@@ -6,19 +6,24 @@ endif
 
 call plug#begin()
 
-Plug 'lifepillar/vim-gruvbox8'
+Plug 'sainnhe/gruvbox-material'
 Plug 'nathom/filetype.nvim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 call plug#end()
 
 set termguicolors
-let g:gruvbox_italic = 1
-colorscheme gruvbox8 
+let g:gruvbox_material_background = 'medium'
+let g:gruvbox_material_enable_bold = 1
+let g:gruvbox_material_enable_italic = 1
+let g:gruvbox_material_visual = 'reverse'
+let g:gruvbox_material_ui_contrast = 'low'
+let g:gruvbox_material_better_performance = 1
+colorscheme gruvbox-material
 
 " Speed up startup
 set history=50
-if has("win32") || has ("wsl")
+if has("win32") || has("wsl")
     let g:clipboard = {
     \   'name': 'win32yank',
     \   'copy': {
@@ -47,14 +52,14 @@ set noshowcmd
 set number
 set splitbelow
 set splitright
-set scrolloff=8
+set scrolloff=5
 
 " Formatting
 set expandtab
 set nowrap
 set shiftround
-set shiftwidth=4
-set tabstop=4
+set shiftwidth=2
+set tabstop=2
 
 " Search
 set ignorecase
@@ -104,14 +109,12 @@ augroup restore_terminal_cursor_on_exit
 augroup END
 
 " Filetype settings
-augroup html
+augroup python 
     au!
-    au FileType html setlocal tabstop=2 shiftwidth=2
-    au FileType htmldjango setlocal tabstop=2 shiftwidth=2
+    au FileType python setlocal tabstop=4 shiftwidth=4
 augroup END
 
 " Plugins Settings
-
 
 " CoC
 set updatetime=300
