@@ -9,6 +9,10 @@ check() {
         if [ -d ".git" ]; then
             if [ -n "$(git status -s)" ]; then
                 RESULT="${RESULT:+${RESULT}, }$d"
+            else
+                if [ -n "$(git cherry -v)" ]; then
+                    RESULT="${RESULT:+${RESULT}, }$d"
+                fi
             fi
         else
             check *
