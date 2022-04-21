@@ -21,5 +21,6 @@ check() {
     done
 }
 
-check *
+cd "$HOME"
+check * 2>/dev/null
 echo "${RESULT:+ ${RESULT} }"

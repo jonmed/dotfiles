@@ -68,7 +68,9 @@ source ~/.local/gitstatus/gitstatus.prompt.sh
 
 PROMPT_DIRTRIM=3
 if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;36m\]\w\[\033[00m\] ${GITSTATUS_PROMPT}\n\[\033[01;$((31+!$?))m\]>\[\033[00m\] '
+    #PS1='${debian_chroot:+($debian_chroot)}\e[1;96m\w\e[0m ${GITSTATUS_PROMPT}\n\e[1;$((91+!$?))m>\e[0m '
+    #PS1='${debian_chroot:+($debian_chroot)}\e[1;96m\w\e[0m\n\e[1;$((91+!$?))m>\e[0m '
+    PS1='${debian_chroot:+($debian_chroot)}\[\033[1;96m\]\w\[\033[0m\] ${GITSTATUS_PROMPT}\n\[\033[1;$((91+!$?))m\]>\[\033[0m\] '
 else
     PS1='${debian_chroot:+($debian_chroot)}\w\n> '
 fi
@@ -113,6 +115,7 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 # See /usr/share/doc/bash-doc/examples in the bash-doc package.
 
 alias vim='nvim'
+alias wts='nvim /mnt/c/Users/jon/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json'
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
