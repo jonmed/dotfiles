@@ -44,15 +44,15 @@ fi
 
 
 source ~/.local/gitstatus/gitstatus.prompt.sh
-printf -v PS1RHS "\e[0;1;31m$(check_repos) \e[0m"
+#printf -v PS1RHS "\e[0;1;31m$(check_repos) \e[0m"
 
-PS1RHS_stripped=$(sed "s,\x1B\[[0-9;]*[a-zA-Z],,g" <<<"$PS1RHS")
+#PS1RHS_stripped=$(sed "s,\x1B\[[0-9;]*[a-zA-Z],,g" <<<"$PS1RHS")
 
-Save='\e[s' # Save cursor position
-Rest='\e[u' # Restore cursor to save point
+#Save='\e[s' # Save cursor position
+#Rest='\e[u' # Restore cursor to save point
 
-PS1='\[\033[1;96m\]\w\[\033[0m\] ${GITSTATUS_PROMPT}\n\[\033[1;$((91+!$?))m\]>\[\033[0m\] '
-PS1="\[${Save}\e[${COLUMNS:-$(tput cols)}C\e[${#PS1RHS_stripped}D${PS1RHS}${Rest}\]${PS1}"
+PS1='\[\033[1;96m\]\w\[\033[0m\] ${GITSTATUS_PROMPT} \[\033[91m\]$(check_repos)\[\033[0m\]\n\[\033[1;$((91+!$?))m\]>\[\033[0m\] '
+#PS1="\[${Save}\e[${COLUMNS:-$(tput cols)}C\e[${#PS1RHS_stripped}D${PS1RHS}${Rest}\]${PS1}"
 
 PROMPT_DIRTRIM=3
 
