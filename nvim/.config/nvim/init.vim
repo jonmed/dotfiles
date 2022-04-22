@@ -1,7 +1,7 @@
 let mapleader = " "
 
 if has("nvim")
-    let g:plug_home = stdpath('data') . '/plugged'
+  let g:plug_home = stdpath('data') . '/plugged'
 endif
 
 call plug#begin()
@@ -24,18 +24,18 @@ colorscheme gruvbox-material
 " Speed up startup
 set history=50
 if has("win32") || has("wsl")
-    let g:clipboard = {
-    \   'name': 'win32yank',
-    \   'copy': {
-    \      '+': 'win32yank.exe -i --crlf',
-    \      '*': 'win32yank.exe -i --crlf',
-    \    },
-    \   'paste': {
-    \      '+': 'win32yank.exe -o --lf',
-    \      '*': 'win32yank.exe -o --lf',
-    \   },
-    \   'cache_enabled': 1,
-    \ }
+  let g:clipboard = {
+\   'name': 'win32yank',
+\   'copy': {
+\      '+': 'win32yank.exe -i --crlf',
+\      '*': 'win32yank.exe -i --crlf',
+\    },
+\   'paste': {
+\      '+': 'win32yank.exe -o --lf',
+\      '*': 'win32yank.exe -o --lf',
+\   },
+\   'cache_enabled': 1,
+\ }
 endif
 set clipboard+=unnamed,unnamedplus
 
@@ -71,15 +71,24 @@ set wildignorecase
 
 " Statusline
 function! CheckFEnc()
-    if &fenc == '' || &fenc == 'utf-8'
-        return ''
-    endif
-    return '['.&fenc.']'
+  if &fenc == '' || &fenc == 'utf-8'
+    return ''
+  endif
+  return '['.&fenc.']'
+endfunction
+
+function! GitBranch()
+  return system("git rev-parse --abbrev-ref HEAD 2>/dev/null | tr -d '\n'")
+endfunction
+
+function! StatuslineGit()
+  let l:branchname = GitBranch()
+  return strlen(l:branchname) > 0?'  '.l:branchname.' ':''
 endfunction
 
 set statusline=
 set statusline+=%<%f\ %y
-set statusline+=%{'['.&ff.']'}%{CheckFEnc()}\ %m%r
+set statusline+=%{'['.&ff.']'}%{CheckFEnc()}\ %m%r\ %{StatuslineGit()}
 set statusline+=%=\ \ %11.(%l/%L%)\ :\ %-5(%c%V%)
 
 " Remaps
@@ -96,6 +105,9 @@ nnoremap n nzzzv
 nnoremap N Nzzzv
 nnoremap J mzJ`z
 
+tnoremap <c-w> <c-\><c-n><c-w>
+tnoremap <esc> <c-\><c-n>
+
 "cmap w!! %!sudo tee > /dev/null %
 
 "nnoremap <silent> <leader>e :Lex 30<cr>
@@ -104,14 +116,14 @@ nnoremap J mzJ`z
 
 " Autocommands
 augroup restore_terminal_cursor_on_exit
-    autocmd!
-    autocmd VimLeave * set guicursor=a:ver25-blinkwait700-blinkoff250-blinkon400
+  autocmd!
+  autocmd VimLeave * set guicursor=a:ver25-blinkwait700-blinkoff250-blinkon400
 augroup END
 
 " Filetype settings
 augroup python 
-    au!
-    au FileType python setlocal tabstop=4 shiftwidth=4
+  au!
+  au FileType python setlocal tabstop=4 shiftwidth=4
 augroup END
 
 " Plugins Settings
@@ -136,11 +148,11 @@ nmap <silent> gr <Plug>(coc-references)
 nnoremap <silent> K :call <SID>show_documentation()<CR>
 
 function! s:show_documentation()
-    if CocAction('hasProvider', 'hover')
-        call CocActionAsync('doHover')
-    else
-        call feedkeys('K', 'in')
-    endif
+  if CocAction('hasProvider', 'hover')
+    call CocActionAsync('doHover')
+  else
+    call feedkeys('K', 'in')
+  endif
 endfunction
 
 autocmd CursorHold * silent call CocActionAsync('highlight')
