@@ -42,9 +42,9 @@ if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
   debian_chroot=$(cat /etc/debian_chroot)
 fi
 
-source ~/.local/gitstatus/gitstatus.prompt.sh
 
 _prompt_set(){
+  source ~/.local/gitstatus/gitstatus.prompt.sh
   printf -v PS1RHS "\e[0;1;31m$(check_repos) \e[0m"
 
   PS1RHS_stripped=$(sed "s,\x1B\[[0-9;]*[a-zA-Z],,g" <<<"$PS1RHS")
