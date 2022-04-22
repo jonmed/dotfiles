@@ -3,24 +3,17 @@
 RESULT=""
 
 check() {
-    for d in "$@"; do
-        test -d "$d" -a \! -L "$d" -a "$d" != "venv" || continue
-        cd "$d"
-        if [ -d ".git" ]; then
-            if [ -n "$(git status -s)" ]; then
-                RESULT="${RESULT:+${RESULT}, }$d"
-            else
-                if [ -n "$(git cherry -v)" ]; then
-                    RESULT="${RESULT:+${RESULT}, }$d"
-                fi
-            fi
-        else
-            check *
-        fi
-        cd ..
-    done
+  for d in "$@"; do
+    if [ -n "$(cd $d; git status -s)" ]; then
+      RESULT="${RESULT:+${RESULT}, }$d"
+    else
+      if [ -n "$(cd $d; git cherry -v)" ]; then
+        RESULT="${RESULT:+${RESULT}, }$d"
+      fi
+    fi
+  done
 }
 
 cd "$HOME"
-check * 2>/dev/null
-echo "${RESULT:+ ${RESULT} }"
+check dotfiles notes uepb 2>/dev/null
+echo "${RESULT:+ ${RESULT}}"

@@ -5,11 +5,9 @@ if has("nvim")
 endif
 
 call plug#begin()
-
 Plug 'sainnhe/gruvbox-material'
 Plug 'nathom/filetype.nvim'
 "Plug 'neoclide/coc.nvim', {'branch': 'release'}
-
 call plug#end()
 
 set termguicolors
@@ -23,6 +21,7 @@ colorscheme gruvbox-material
 
 " Speed up startup
 set history=50
+" look up how to disable selected default plugins
 if has("win32") || has("wsl")
   let g:clipboard = {
 \   'name': 'win32yank',
