@@ -124,3 +124,8 @@ augroup python
   au!
   au FileType python setlocal tabstop=4 shiftwidth=4
 augroup END
+
+augroup markdown
+  au!
+  au FileType markdown setlocal conceallevel=2
+augroup END
