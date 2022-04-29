@@ -12,6 +12,7 @@ Plug 'rebelot/kanagawa.nvim'
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'kyazdani42/nvim-tree.lua'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 call plug#end()
 
 " Speed up startup
@@ -73,7 +74,8 @@ set clipboard+=unnamed,unnamedplus
 
 " Statusline
 set statusline=
-set statusline+=%<%f\ %m%r\ \ %{&ft==''?'':&ft..'\ \ '}%{&ff}\ \ %{&fenc}
+" set statusline+=%<%f\ %m%r\ \ %{&ft==''?'':&ft..'\ \ '}%{&ff}\ \ %{&fenc}
+set statusline+=%<%f\ %m%r\ \ %{&ft==''?'':&ft..'\ \ '}
 set statusline+=%=\ \ \ %3l/%L\ :\ %-2v
 
 " File Explorer
@@ -87,6 +89,9 @@ require('nvim-tree').setup {
 }
 END
 nnoremap <leader>e :NvimTreeToggle<CR>
+
+" markdown-preview
+let g:mkdp_auto_close = 0
 
 " coc settings
 set updatetime=300
