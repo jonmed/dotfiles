@@ -11,6 +11,7 @@ setxkbmap -option caps:ctrl_modifier -option shift:both_capslock -option grp:swi
 #xmodmap -e "remove mod4 = $spare_modifier"
 #xmodmap -e "add shift = $spare_modifier Shift_R Shift_L"
 #xmodmap -e "keycode any = space"
+xmodmap -e "keycode 51 = Return Return"
 
 killall xcape 2>/dev/null ; xcape -e "Caps_Lock=Escape"
 
