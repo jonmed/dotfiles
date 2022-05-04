@@ -1,6 +1,6 @@
 #!/bin/sh
 
-setxkbmap -option caps:ctrl_modifier -option shift:both_capslock
+setxkbmap -option caps:ctrl_modifier -option shift:both_capslock -option grp:switch 
 #spare_modifier="Hyper_L"
 #xmodmap -e "clear shift"
 #xmodmap -e "keycode 97 = Shift_R"
