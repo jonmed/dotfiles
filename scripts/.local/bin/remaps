@@ -1,19 +1,7 @@
 #!/bin/sh
 
-setxkbmap -option caps:ctrl_modifier -option shift:both_capslock -option grp:switch 
-#spare_modifier="Hyper_L"
-#xmodmap -e "clear shift"
-#xmodmap -e "keycode 97 = Shift_R"
-#xmodmap -e "add shift = Shift_L Shift_R"
-#xmodmap -e "clear shift\n add shift = Shift_L Shift_R"
-#xmodmap -e "add shift = Shift_L Shift_R"
-#xmodmap -e "keycode 65 = $spare_modifier"
-#xmodmap -e "remove mod4 = $spare_modifier"
-#xmodmap -e "add shift = $spare_modifier Shift_R Shift_L"
-#xmodmap -e "keycode any = space"
-xmodmap -e "keycode 51 = Return Return"
-
-killall xcape 2>/dev/null ; xcape -e "Caps_Lock=Escape"
+#setxkbmap -option caps:ctrl_modifier -option shift:both_capslock -option grp:switch 
+setxkbmap -option grp:toggle 
 
 # setxkbmap options
 #  grp                  Switching to another layout
