@@ -1,5 +1,4 @@
 {
   "diagnostic.virtualText": true,
-  "diagnostic.virtualTextCurrentLineOnly": false,
   "diagnostic.virtualTextLines": 1 
 }
