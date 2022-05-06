@@ -9,7 +9,7 @@ if [ "$TIME" = "0:00" ]; then
   until [ "$COUNT" -eq "0" ]; do
     ((COUNT-=1))
     PERCENT=$((100-100*COUNT/START))
-    echo "#Time remaining$(echo "obase=60;$COUNT" | bc)"
+    echo "#<span font="20">Time remaining$(echo "obase=60;$COUNT" | bc)</span>"
     echo $PERCENT
     sleep 1
   done | zenity --title "Break Timer" --progress --percentage=0\
