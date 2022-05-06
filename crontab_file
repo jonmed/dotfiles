@@ -4,3 +4,6 @@
 * * * * * sleep 30; XDG_RUNTIME_DIR=/run/user/$(id -u) DISPLAY=:0 /home/usuario/.local/bin/pomo_check.sh >> /home/usuario/pomo_log 2>&1
 * * * * * sleep 45; XDG_RUNTIME_DIR=/run/user/$(id -u) DISPLAY=:0 /home/usuario/.local/bin/pomo_check.sh >> /home/usuario/pomo_log 2>&1
 
+# Check repos every 30s
+* * * * * XDG_RUNTIME_DIR=/run/user/$(id -u) DISPLAY=:0 /home/usuario/.local/bin/check_repos_v2 >> /home/usuario/repos_log 2>&1
+* * * * * sleep 30; XDG_RUNTIME_DIR=/run/user/$(id -u) DISPLAY=:0 /home/usuario/.local/bin/check_repos_v2 >> /home/usuario/repos_log 2>&1
