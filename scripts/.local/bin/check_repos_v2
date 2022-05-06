@@ -6,6 +6,7 @@ check() {
     if [ -d $d ]; then
       cd $d
       if [ -n "$(git status -s)" ]; then
+        notify-send -i info -t 2000 "Commiting $d"
         git add .
         git commit -m "Automatic commit: $(date +'%d-%b-%y %H:%M:%S')"
         git push
