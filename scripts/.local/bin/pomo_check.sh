@@ -12,8 +12,8 @@ if [ "$TIME" = "0:00" ]; then
     echo "#Time remaining$(echo "obase=60;$COUNT" | bc)"
     echo $PERCENT
     sleep 1
-  done | zenity --title "Break Timer" --progress --percentage=0 --text ""\
-    --auto-close
+  done | zenity --title "Break Timer" --progress --percentage=0\
+    --no-cancel --text "" --auto-close
   if zenity --title "Pomodoro" --question  --text "Start new pomodoro?"
   then
     pomodoro start
