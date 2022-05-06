@@ -15,6 +15,7 @@ check() {
           echo "Up-to-date"
       elif [ $LOCAL = $BASE ]; then
           echo "Need to pull"
+          notify-send -i info -t 2000 "Pulling $d"
           git pull
       elif [ $REMOTE = $BASE ]; then
           echo "Need to push"
