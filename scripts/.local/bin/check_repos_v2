@@ -6,27 +6,19 @@ check() {
     if [ -d "$d/.git" ]; then
       cd $d
       git remote update
-      UPSTREAM=${1:-'@{u}'}
       LOCAL=$(git rev-parse @)
-      REMOTE=$(git rev-parse "$UPSTREAM")
-      BASE=$(git merge-base @ "$UPSTREAM")
+      REMOTE=$(git rev-parse @{u})
 
       if [ $LOCAL = $REMOTE ]; then
-          echo "Up-to-date"
-      elif [ $LOCAL = $BASE ]; then
-          echo "Need to pull"
-          notify-send -i info -t 2000 "Pulling $d"
-          git pull
-      elif [ $REMOTE = $BASE ]; then
-          echo "Need to push"
+        if [ -n "$(git status -s)" ]; then
+          notify-send -i info -t 2000 "Commiting $d"
+          git add .
+          git commit -m "Automatic commit: $(date +'%d-%b-%y %H:%M:%S')"
+          git push
+        fi
       else
-          echo "Diverged"
-      fi
-      if [ -n "$(git status -s)" ]; then
-        notify-send -i info -t 2000 "Commiting $d"
-        git add .
-        git commit -m "Automatic commit: $(date +'%d-%b-%y %H:%M:%S')"
-        git push
+        notify-send -i info -t 2000 "Pulling $d"
+        git pull
       fi
       cd ..
     fi
