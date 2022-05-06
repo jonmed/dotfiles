@@ -9,12 +9,12 @@ if [ "$TIME" = "0:00" ]; then
   until [ "$COUNT" -eq "0" ]; do
     ((COUNT-=1))
     PERCENT=$((100-100*COUNT/START))
-    echo "#<span font=\"20\">Time remaining$(echo "obase=60;$COUNT" | bc)</span>"
+    echo "#Time remaining$(echo "obase=60;$COUNT" | bc)"
     echo $PERCENT
     sleep 1
-  done | zenity --title "<span font=\"20\">Break Timer</span>" --progress --percentage=0\
+  done | zenity --title "Break Timer" --progress --percentage=0\
     --no-cancel --text "" --auto-close
-  if zenity --title "<span font=\"20\">Pomodoro</span>" --question  --text "<span font=\"20\">Start new pomodoro?</span>"
+  if zenity --title "Pomodoro" --question  --text "Start new pomodoro?"
   then
     pomodoro start
     TIME=$(pomodoro status --format "%r")
