@@ -14,7 +14,7 @@ if [ "$TIME" = "0:00" ]; then
     sleep 1
   done | zenity --title "<span font="20">Break Timer</span>" --progress --percentage=0\
     --no-cancel --text "" --auto-close
-  if zenity --title "Pomodoro" --question  --text "Start new pomodoro?"
+  if zenity --title "<span font="20">Pomodoro</span>" --question  --text "<span font="20">Start new pomodoro?</span>"
   then
     pomodoro start
     TIME=$(pomodoro status --format "%r")
