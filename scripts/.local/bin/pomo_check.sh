@@ -2,10 +2,9 @@
 PATH=/home/usuario/.local/bin:/usr/bin
 
 TIME=$(pomodoro status --format "%r")
-STATUS_INTERVAL=2
 if [ "$TIME" = "0:00" ]; then
   pomodoro clear
-  COUNT=10
+  COUNT=300
   START=$COUNT
   until [ "$COUNT" -eq "0" ]; do
     ((COUNT-=1))

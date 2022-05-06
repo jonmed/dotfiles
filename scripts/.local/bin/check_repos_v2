@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+PATH=/home/usuario/.local/bin:/usr/bin
+
+RESULT=""
+
+check() {
+  for d in "$@"; do
+    if [ -d $d ]; then
+      cd $d
+      if [ -n "$(git status -s)" ]; then
+        git add .
+        git commit -m "Automatic commit: $(date +'%d-%b-%y %H:%M:%S')"
+        git push
+      fi
+      cd ..
+    fi
+  done
+}
+
+cd "$HOME"
+check dotfiles notes uepb 2>/dev/null
