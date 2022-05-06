@@ -42,9 +42,6 @@ if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
   debian_chroot=$(cat /etc/debian_chroot)
 fi
 
-#source ~/.local/gitstatus/gitstatus.prompt.sh
-
-#PS1='\[\033[1;96m\]\w\[\033[0m\] ${GITSTATUS_PROMPT} \[\033[91m\]$(check_repos)\[\033[0m\]\n\[\033[1;$((91+!$?))m\]>\[\033[0m\] '
 PS1='\[\033[1;96m\]\w\[\033[0m\] \[\033[91m\]$(check_repos)\[\033[0m\]\n\[\033[1;$((91+!$?))m\]>\[\033[0m\] '
 
 
