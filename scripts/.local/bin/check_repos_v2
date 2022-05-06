@@ -3,7 +3,7 @@ PATH=/home/usuario/.local/bin:/usr/bin
 
 check() {
   for d in "$@"; do
-    if [ -d $d ]; then
+    if [ -d "$d/.git" ]; then
       cd $d
       if [ -n "$(git status -s)" ]; then
         notify-send -i info -t 2000 "Commiting $d"
