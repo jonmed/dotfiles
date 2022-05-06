@@ -1,6 +1,6 @@
 # Check if pomodoro timer has finished every 15s
-* * * * * XDG_RUNTIME_DIR=/run/user/$(id -u) DISPLAY=:0 /home/usuario/test.sh >> /home/usuario/log 2>&1
-* * * * * sleep 15; XDG_RUNTIME_DIR=/run/user/$(id -u) DISPLAY=:0 /home/usuario/test.sh >> /home/usuario/log 2>&1
-* * * * * sleep 30; XDG_RUNTIME_DIR=/run/user/$(id -u) DISPLAY=:0 /home/usuario/test.sh >> /home/usuario/log 2>&1
-* * * * * sleep 45; XDG_RUNTIME_DIR=/run/user/$(id -u) DISPLAY=:0 /home/usuario/test.sh >> /home/usuario/log 2>&1
+* * * * * XDG_RUNTIME_DIR=/run/user/$(id -u) DISPLAY=:0 /home/usuario/.local/bin/pomo_check.sh >> /home/usuario/pomo_log 2>&1
+* * * * * sleep 15; XDG_RUNTIME_DIR=/run/user/$(id -u) DISPLAY=:0 /home/usuario/.local/bin/pomo_check.sh >> /home/usuario/pomo_log 2>&1
+* * * * * sleep 30; XDG_RUNTIME_DIR=/run/user/$(id -u) DISPLAY=:0 /home/usuario/.local/bin/pomo_check.sh >> /home/usuario/pomo_log 2>&1
+* * * * * sleep 45; XDG_RUNTIME_DIR=/run/user/$(id -u) DISPLAY=:0 /home/usuario/.local/bin/pomo_check.sh >> /home/usuario/pomo_log 2>&1
 
