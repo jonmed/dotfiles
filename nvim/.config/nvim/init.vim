@@ -217,6 +217,6 @@ augroup markdown
 augroup END
 
 augroup vimwiki 
-  au!
-  au FileType vim nnoremap <buffer> j :VimwikiGoBackLink<cr> 
-augroup END
+  au! vimwiki
+  au FileType vimwiki nnoremap <buffer> <c-h> :VimwikiGoBackLink<cr> 
+augroup end 
