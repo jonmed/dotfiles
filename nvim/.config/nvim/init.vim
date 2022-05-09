@@ -16,6 +16,9 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': 
 Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'nvim-neorg/neorg'
+Plug 'vimwiki/vimwiki'
 call plug#end()
 
 " Speed up startup
@@ -96,6 +99,10 @@ nnoremap <leader>e :NvimTreeToggle<CR>
 " markdown-preview
 let g:mkdp_auto_close = 0
 
+" vimwiki
+let g:vimwiki_list = [{'path': '~/notes/', 'syntax': 'markdown', 'ext': '.md'}]
+let g:markdown_fenced_languages = ['c', 'c++', 'python', 'bash', 'json', 'css', 'html']
+
 " coc settings
 set updatetime=300
 set shortmess+=c
@@ -136,6 +143,16 @@ inoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? "\<c-r>=coc#float
 vnoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-f>"
 vnoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-b>"
 
+" Treesitter
+lua << END
+require('nvim-treesitter.configs').setup {
+  ensure_installed = { "norg", --[[ other parsers you would wish to have ]] },
+  highlight = { -- Be sure to enable highlights if you haven't!
+    enable = true,
+  }
+}
+END
+
 " Telescope
 lua << END
 require('telescope').load_extension('fzf')
@@ -144,6 +161,16 @@ nnoremap <leader>ff <cmd>Telescope find_files theme=ivy<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep theme=ivy<cr>
 nnoremap <leader>fb <cmd>Telescope buffers theme=ivy<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags theme=ivy<cr>
+
+" neorg
+lua << EOF
+require('neorg').setup {
+  load = {
+    ["core.defaults"] = {},
+    ["core.norg.concealer"] = {}
+  }
+}
+EOF
 
 " General remaps
 noremap <leader>d "_d
