@@ -215,9 +215,3 @@ augroup markdown
   au!
   au FileType markdown setlocal conceallevel=2
 augroup END
-
-augroup vimwiki
-  autocmd! vimwiki
-  "autocmd FileType vimwiki nnoremap <buffer> <c-h> :VimwikiGoBackLink<cr> 
-  autocmd FileType vimwiki setlocal tabstop=8 shiftwidth=8
-augroup END 
