@@ -218,5 +218,5 @@ augroup END
 
 augroup vimwiki 
   au!
-  au FileType vimwiki nnoremap <buffer> <c-h> <bs> 
+  au FileType vimwiki nmap <buffer> <c-h> <bs> 
 augroup END
