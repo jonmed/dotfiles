@@ -218,5 +218,6 @@ augroup END
 
 augroup vimwiki 
   autocmd! vimwiki
-  autocmd FileType vimwiki nnoremap <buffer> <c-h> :VimwikiGoBackLink<cr> 
+  "autocmd FileType vimwiki nnoremap <buffer> <c-h> :VimwikiGoBackLink<cr> 
+  autocmd FileType vimwiki echom Hello 
 augroup end 
