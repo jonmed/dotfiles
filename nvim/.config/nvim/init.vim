@@ -218,5 +218,5 @@ augroup END
 
 augroup vimwiki 
   au!
-  au FileType vimwiki nnoremap <buffer> j :VimwikiGoBackLink<cr> 
+  au FileType vim nnoremap <buffer> j :VimwikiGoBackLink<cr> 
 augroup END
