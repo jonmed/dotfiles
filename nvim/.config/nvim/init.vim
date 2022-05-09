@@ -215,3 +215,8 @@ augroup markdown
   au!
   au FileType markdown setlocal conceallevel=2
 augroup END
+
+augroup vimwiki 
+  au!
+  au FileType vimwiki nnoremap <buffer> <c-h> <bs> 
+augroup END
