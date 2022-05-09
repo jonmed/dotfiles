@@ -220,4 +220,4 @@ augroup vimwiki
   autocmd! vimwiki
   "autocmd FileType vimwiki nnoremap <buffer> <c-h> :VimwikiGoBackLink<cr> 
   autocmd FileType vimwiki setlocal tabstop=8 shiftwidth=8
-augroup end
+augroup END 
