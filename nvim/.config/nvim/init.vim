@@ -18,7 +18,7 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'nvim-neorg/neorg'
-Plug 'vimwiki/vimwiki', {'branch': 'dev'}
+#Plug 'vimwiki/vimwiki', {'branch': 'dev'}
 call plug#end()
 
 " Speed up startup
