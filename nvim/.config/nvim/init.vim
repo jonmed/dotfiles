@@ -174,6 +174,9 @@ require('neorg').setup {
 }
 EOF
 
+" lens
+let g:lens#disabled_filetypes = ['nerdtree', 'fzf']
+
 " General remaps
 noremap <leader>d "_d
 nnoremap x "_x
@@ -218,4 +221,3 @@ augroup markdown
   au FileType markdown setlocal conceallevel=2
 augroup END
 
-" make function to slide vertical splits
