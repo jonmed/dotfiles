@@ -175,7 +175,7 @@ require('neorg').setup {
 EOF
 
 " lens
-let g:lens#disabled_filetypes = ['nerdtree', 'fzf']
+let g:lens#disabled_filetypes = ['nerdtree', 'fzf', 'NvimTree']
 
 " General remaps
 noremap <leader>d "_d
