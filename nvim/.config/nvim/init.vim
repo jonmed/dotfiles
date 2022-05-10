@@ -174,6 +174,8 @@ require('neorg').setup {
 }
 EOF
 
+" lens
+nnoremap <silent> <leader>l call lens#toggle()<cr>
 " General remaps
 noremap <leader>d "_d
 nnoremap x "_x
