@@ -215,3 +215,5 @@ augroup markdown
   au!
   au FileType markdown setlocal conceallevel=2
 augroup END
+
+" make function to slide vertical splits
