@@ -81,13 +81,21 @@ set wildignorecase
 set clipboard+=unnamed,unnamedplus
 
 " Statusline
-let b:coc_diagnostic_disabled  = 0
+let s:coc_diagnostic_disabled  = 0
 
 function! Is_coc_diagnostic_enabled ()
-  if b:coc_diagnostic_disabled == 1
+  if s:coc_diagnostic_disabled == 1
     return "CoC disabled"
   else
     return "CoC enabled"
+  endif
+endfunction
+
+function! ToggleDiagnostic ()
+  if s:coc_diagnostic_disabled == 1
+    s:coc_diagnostic_disabled == 0
+  else
+    s:coc_diagnostic_disabled == 1
   endif
 endfunction
 
