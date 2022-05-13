@@ -84,7 +84,7 @@ set clipboard+=unnamed,unnamedplus
 let coc_diagnostic_disabled = 0
 
 function! Is_coc_diagnostic_enabled ()
-  if coc_diagnostic_disabled == 1
+  if (coc_diagnostic_disabled == 1)
     return "CoC disabled"
   else
     return "CoC enabled"
