@@ -92,7 +92,7 @@ function! Is_coc_diagnostic_enabled ()
 endfunction
 
 function! ToggleDiagnostic ()
-  CocAction('diagnosticToggle')
+  call CocAction('diagnosticToggle')
   if (s:coc_diagnostic_enabled == 1)
     let s:coc_diagnostic_enabled = 0
   else
