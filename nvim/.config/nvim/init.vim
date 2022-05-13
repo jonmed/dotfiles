@@ -87,7 +87,7 @@ function! Is_coc_diagnostic_enabled ()
   if (s:coc_diagnostic_enabled == 1)
     return "%#Number#CoC enabled%#Statusline#"
   else
-    return "CoC disabled"
+    return "%#WarningMsg#CoC disabled%#Statusline#"
   endif
 endfunction
 
