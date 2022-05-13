@@ -87,7 +87,7 @@ function! Is_coc_diagnostic_enabled ()
   if (s:coc_diagnostic_enabled == 1)
     return "CoC enabled"
   else
-    return "%#CocStrikeThrough#CoC disabled%#Statusline#"
+    return "%#StatuslineNC#CoC disabled%#Statusline#"
   endif
 endfunction
 
