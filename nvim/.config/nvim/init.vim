@@ -80,7 +80,13 @@ set wildignorecase
 " System
 set clipboard+=unnamed,unnamedplus
 
-function! Is_coc_diagnostic_enabled
+function! Is_coc_diagnostic_enabled ()
+  if b:coc_diagnostic_disable == 1
+    return "CoC disabled"
+  else
+    return "CoC enabled"
+  endif
+
 endfunction
 
 " Statusline
