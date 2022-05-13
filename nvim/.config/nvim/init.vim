@@ -101,7 +101,7 @@ function! ToggleDiagnostic ()
 endfunction
 
 set statusline=
-set statusline+=%<%f\ %m%r\ \ %{&ft==''?'':&ft..'\ \ '}%{Is_coc_diagnostic_enabled()}
+set statusline+=%<%f\ %m%r\ \ %{&ft==''?'':&ft..'\ \ '}%{%Is_coc_diagnostic_enabled()%}
 set statusline+=%=\ \ \ %3l/%L\ :\ %-2v
 
 " File Explorer
