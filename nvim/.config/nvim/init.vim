@@ -81,17 +81,18 @@ set wildignorecase
 set clipboard+=unnamed,unnamedplus
 
 " Statusline
-let s:coc_diagnostic_disabled = 0
+let s:coc_diagnostic_enabled = 1
 
 function! Is_coc_diagnostic_enabled ()
-  if (s:coc_diagnostic_disabled == 1)
-    return "CoC disabled"
-  else
+  if (s:coc_diagnostic_enabled == 1)
     return "CoC enabled"
+  else
+    return "CoC disabled"
   endif
 endfunction
 
 function! ToggleDiagnostic ()
+  CocAction('diagnosticToggle')
   if s:coc_diagnostic_disabled == 1
     let s:coc_diagnostic_disabled = 0
   else
@@ -163,7 +164,7 @@ inoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? "\<c-r>=coc#float
 vnoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-f>"
 vnoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-b>"
 
-nnoremap <silent> <leader>c :call CocAction('diagnosticToggle')<cr>:call ToggleDiagnostic()<cr>
+nnoremap <silent> <leader>c :call <cr>:call ToggleDiagnostic()<cr>
 
 " Treesitter
 lua << END
