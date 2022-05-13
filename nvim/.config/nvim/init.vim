@@ -85,9 +85,9 @@ let s:coc_diagnostic_enabled = 1
 
 function! Is_coc_diagnostic_enabled ()
   if (s:coc_diagnostic_enabled == 1)
-    return "%#Number#CoC enabled%#Statusline#"
+    set statusline+=%#Number#CoC\ enabled%#Statusline#
   else
-    return "%#WarningMsg#CoC disabled%#Statusline#"
+    set statusline+=%#WarningMsg#CoC\ disabled%#Statusline#
   endif
 endfunction
 
@@ -103,7 +103,6 @@ endfunction
 set statusline=
 set statusline+=%<%f\ %m%r\ \ %{&ft==''?'':&ft..'\ \ '}
 call Is_coc_diagnostic_enabled()
-set statusline+=%{Is_coc_diagnostic_enabled()}
 set statusline+=%=\ \ \ %3l/%L\ :\ %-2v
 
 " File Explorer
