@@ -80,10 +80,13 @@ set wildignorecase
 " System
 set clipboard+=unnamed,unnamedplus
 
+function! Is_coc_diagnostic_enabled
+endfunction
+
 " Statusline
 set statusline=
 " set statusline+=%<%f\ %m%r\ \ %{&ft==''?'':&ft..'\ \ '}%{&ff}\ \ %{&fenc}
-set statusline+=%<%f\ %m%r\ \ %{&ft==''?'':&ft..'\ \ '}%{&b:coc_diagnostic_disable}
+set statusline+=%<%f\ %m%r\ \ %{&ft==''?'':&ft..'\ \ '}%{if b:coc_diagnostic_disable }
 set statusline+=%=\ \ \ %3l/%L\ :\ %-2v
 
 " File Explorer
