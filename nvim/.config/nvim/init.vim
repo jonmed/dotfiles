@@ -93,10 +93,10 @@ endfunction
 
 function! ToggleDiagnostic ()
   CocAction('diagnosticToggle')
-  if s:coc_diagnostic_disabled == 1
-    let s:coc_diagnostic_disabled = 0
+  if (s:coc_diagnostic_enabled == 1)
+    let s:coc_diagnostic_enabled = 0
   else
-    let s:coc_diagnostic_disabled = 1
+    let s:coc_diagnostic_enabled = 1
   endif
 endfunction
 
