@@ -101,7 +101,6 @@ function! ToggleDiagnostic ()
 endfunction
 
 set statusline=
-" set statusline+=%<%f\ %m%r\ \ %{&ft==''?'':&ft..'\ \ '}%{&ff}\ \ %{&fenc}
 set statusline+=%<%f\ %m%r\ \ %{&ft==''?'':&ft..'\ \ '}%{Is_coc_diagnostic_enabled()}
 set statusline+=%=\ \ \ %3l/%L\ :\ %-2v
 
@@ -164,7 +163,7 @@ inoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? "\<c-r>=coc#float
 vnoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-f>"
 vnoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-b>"
 
-nnoremap <silent> <leader>c :call <cr>:call ToggleDiagnostic()<cr>
+nnoremap <silent> <leader>c :call ToggleDiagnostic()<cr>
 
 " Treesitter
 lua << END
