@@ -103,7 +103,7 @@ let g:mkdp_auto_close = 0
 
 " vimwiki
 let g:vimwiki_list = [{'path': '~/notes/', 'syntax': 'markdown', 'ext': '.md'}]
-let g:markdown_fenced_languages = ['c', 'c++', 'python', 'shell', 'bash', 'json', 'css', 'html']
+let g:markdown_fenced_languages = ['c', 'c++', 'python', 'sh', 'json', 'css', 'html']
 
 " coc settings
 set updatetime=300
