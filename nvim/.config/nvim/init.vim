@@ -85,7 +85,7 @@ let s:coc_diagnostic_enabled = 1
 
 function! Is_coc_diagnostic_enabled ()
   if (s:coc_diagnostic_enabled == 1)
-    return "CoC enabled"
+    return "%#Number#CoC enabled"
   else
     return "CoC disabled"
   endif
