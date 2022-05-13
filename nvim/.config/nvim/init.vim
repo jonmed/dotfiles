@@ -83,7 +83,7 @@ set clipboard+=unnamed,unnamedplus
 " Statusline
 set statusline=
 " set statusline+=%<%f\ %m%r\ \ %{&ft==''?'':&ft..'\ \ '}%{&ff}\ \ %{&fenc}
-set statusline+=%<%f\ %m%r\ \ %{&ft==''?'':&ft..'\ \ '}coc#status()
+set statusline+=%<%f\ %m%r\ \ %{&ft==''?'':&ft..'\ \ '}%{coc#status()}
 set statusline+=%=\ \ \ %3l/%L\ :\ %-2v
 
 " File Explorer
