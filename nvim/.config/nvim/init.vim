@@ -93,9 +93,9 @@ endfunction
 
 function! ToggleDiagnostic ()
   if coc_diagnostic_disabled == 1
-    let coc_diagnostic_disabled == 0
+    let coc_diagnostic_disabled = 0
   else
-    let coc_diagnostic_disabled == 1
+    let coc_diagnostic_disabled = 1
   endif
 endfunction
 
