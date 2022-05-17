@@ -216,6 +216,8 @@ nnoremap J mzJ`z
 tnoremap <c-w> <c-\><c-n><c-w>
 tnoremap <esc> <c-\><c-n>
 
+nnoremap <silent> <F1> :vsplit ~/scratch.md<cr>
+
 "cmap w!! %!sudo tee > /dev/null %
 
 " Think about using 's' as a leader for splits operations (creating splits and
