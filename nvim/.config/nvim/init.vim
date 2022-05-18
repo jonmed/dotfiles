@@ -100,7 +100,7 @@ function! ToggleDiagnostic ()
   endif
 endfunction
 
-function statusline#gen() abort
+function statusline#gen(winid) abort
   return winid == win_getid() ? "Active" : "Inactive"
 endfunction
 
