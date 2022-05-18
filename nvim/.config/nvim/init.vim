@@ -100,8 +100,8 @@ function! ToggleDiagnostic ()
   endif
 endfunction
 
-hi! SLFile guibg=#727169 guifg=#16161D
-hi! SLFilePL guibg=#16161D guifg=#727169
+hi! SLFile guibg=#727169 guifg=#16161D gui=bold
+hi! SLFilePL guibg=#16161D guifg=#727169 gui=
 
 " To insert result of vim command into buffer
 " :put=Exec('hi Statusline')
