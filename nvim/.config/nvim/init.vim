@@ -100,7 +100,8 @@ function! ToggleDiagnostic ()
   endif
 endfunction
 
-function StatuslineGen(winid) abort
+hi! SLFile guibg=
+function! StatuslineGen(winid) abort
   if (a:winid == win_getid())
     return "%<%f\ %m%r\ \ %{&ft==''?'':&ft..'\ \ '}%{%Is_coc_diagnostic_enabled()%}%=\ \ \ %3l/%L\ :\ %-2v"
   else
