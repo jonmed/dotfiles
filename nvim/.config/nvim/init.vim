@@ -101,7 +101,7 @@ function! ToggleDiagnostic ()
 endfunction
 
 function StatuslineGen(winid) abort
-  return winid == win_getid() ? "Active" : "Inactive"
+  return a:winid == win_getid() ? "Active" : "Inactive"
 endfunction
 
 set statusline=%!StatuslineGen(g:statusline_winid)
