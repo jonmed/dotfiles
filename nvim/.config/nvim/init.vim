@@ -103,6 +103,7 @@ endfunction
 hi! SLFile guibg=#727169 guifg=#000000
 hi! SLFilePL guibg=#000000 guifg=#727169
 
+
 function! StatuslineGen(winid) abort
   if (a:winid == win_getid())
     return "%<%#SLFile#\ %f\ %m%r\ %#SLFilePL#\ue0b0%#Statusline#\ %{&ft==''?'':&ft..'\ \ '}%{%Is_coc_diagnostic_enabled()%}%=\ \ \ %3l/%L\ :\ %-2v"
