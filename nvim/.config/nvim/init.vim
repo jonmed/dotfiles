@@ -103,6 +103,8 @@ endfunction
 hi! SLFile guibg=#727169 guifg=#16161D
 hi! SLFilePL guibg=#16161D guifg=#727169
 
+" To insert result of vim command into buffer
+" :put=Exec('hi Statusline')
 function! Exec(command)
   redir =>output
   silent exec a:command
