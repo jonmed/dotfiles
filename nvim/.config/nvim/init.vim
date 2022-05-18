@@ -105,6 +105,7 @@ function StatuslineGen(winid) abort
     return "Active"
   else
     return "Inactive"
+  endif
 endfunction
 
 set statusline=%!StatuslineGen(g:statusline_winid)
