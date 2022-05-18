@@ -103,6 +103,12 @@ endfunction
 hi! SLFile guibg=#727169 guifg=#000000
 hi! SLFilePL guibg=#000000 guifg=#727169
 
+function! Exec(command)
+  redir =>output
+  silent exec a:command
+  redir END
+  return output
+endfunction
 
 function! StatuslineGen(winid) abort
   if (a:winid == win_getid())
