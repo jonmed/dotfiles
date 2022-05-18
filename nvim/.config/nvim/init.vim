@@ -102,7 +102,7 @@ endfunction
 
 function StatuslineGen(winid) abort
   if (a:winid == win_getid())
-    return "Active"
+    return "%<%f\ %m%r\ \ %{&ft==''?'':&ft..'\ \ '}%{%Is_coc_diagnostic_enabled()%}"
   else
     return "Inactive"
   endif
