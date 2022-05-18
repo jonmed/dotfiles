@@ -100,9 +100,12 @@ function! ToggleDiagnostic ()
   endif
 endfunction
 
-set statusline=
-set statusline+=%<%f\ %m%r\ \ %{&ft==''?'':&ft..'\ \ '}%{%Is_coc_diagnostic_enabled()%}
-set statusline+=%=\ \ \ %3l/%L\ :\ %-2v
+function statusline#gen() abort
+endfunction
+
+set statusline=%!statusline#gen()
+"set statusline+=%<%f\ %m%r\ \ %{&ft==''?'':&ft..'\ \ '}%{%Is_coc_diagnostic_enabled()%}
+"et statusline+=%=\ \ \ %3l/%L\ :\ %-2v
 
 " File Explorer
 lua << END
