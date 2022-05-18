@@ -100,11 +100,11 @@ function! ToggleDiagnostic ()
   endif
 endfunction
 
-function statusline#gen(winid) abort
+function StatuslineGen(winid) abort
   return winid == win_getid() ? "Active" : "Inactive"
 endfunction
 
-set statusline=%!statusline#gen(g:statusline_winid)
+set statusline=%!StatuslineGen(g:statusline_winid)
 "set statusline+=%<%f\ %m%r\ \ %{&ft==''?'':&ft..'\ \ '}%{%Is_coc_diagnostic_enabled()%}
 "et statusline+=%=\ \ \ %3l/%L\ :\ %-2v
 
