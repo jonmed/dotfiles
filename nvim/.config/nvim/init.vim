@@ -83,20 +83,20 @@ set clipboard+=unnamed,unnamedplus
 " Statusline
 let s:coc_diagnostic_enabled = 1
 
-function! Is_coc_diagnostic_enabled ()
-  if (s:coc_diagnostic_enabled == 1)
-    return "%{%&ft==''?'%#SLFileNFFPL#\ue0b0':'%#SLFileFormatPL#\ue0b0'%}%#SLDiagnostic#\ \ %#SLDiagnosticPL#\ue0b0"
-  else
-    return "%{%&ft==''?'%#SLFileNFFNDPL#\ue0b0':'%#SLFileFormatNDPL#\ue0b0'%}%#StatuslineNC#\ \ "
-  endif
-endfunction
-
 function! ToggleDiagnostic ()
   call CocAction('diagnosticToggle')
   if (s:coc_diagnostic_enabled == 1)
     let s:coc_diagnostic_enabled = 0
   else
     let s:coc_diagnostic_enabled = 1
+  endif
+endfunction
+
+function! Is_coc_diagnostic_enabled ()
+  if (s:coc_diagnostic_enabled == 1)
+    return "%{%&ft==''?'%#SLFileNFFPL#\ue0b0':'%#SLFileFormatPL#\ue0b0'%}%#SLDiagnostic#\ \ %#SLDiagnosticPL#\ue0b0"
+  else
+    return "%{%&ft==''?'%#SLFileNFFNDPL#\ue0b0':'%#SLFileFormatNDPL#\ue0b0'%}%#StatuslineNC#\ \ "
   endif
 endfunction
 
