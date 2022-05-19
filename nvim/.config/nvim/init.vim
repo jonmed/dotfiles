@@ -285,7 +285,7 @@ augroup END
 
 augroup get_git_branch 
   autocmd!
-  autocmd BufEnter * let b:git_brach = GitBranch() 
+  autocmd BufEnter * let b:git_branch = GitBranch() 
 augroup END
 
 augroup python 
