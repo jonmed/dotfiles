@@ -128,9 +128,9 @@ let s:ffbg = s:spring_violet1
 let s:fffg = s:sumlink2
 
 hi! SLFileFormat guifg=#938AA9 guibg=#2A2A37 gui=bold,reverse
-call Dohi('SLFileFormat', s:ffbg, s:fffg, 'bold,reverse')
+call Dohi('SLFileFormat', s:fffg, s:ffbg, 'bold')
 call Dohi('SLFileFormatPL', s:ffbg, s:blue, '')
-call Dohi('SLBranch', s:blue, s:wave_blue1, 'bold,reverse')
+call Dohi('SLBranch', s:wave_blue1, s:blue, 'bold')
 call Dohi('SLBranchPL', s:blue, s:green, '')
 call Dohi('SLBranchPLEnd', s:blue, s:black, '')
 call Dohi('SLDiagnostic', s:spring_green, s:green, '')
