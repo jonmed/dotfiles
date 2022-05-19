@@ -113,16 +113,16 @@ hi! SLBranchPL guifg=#658594 guibg=s:green
 hi! SLBranchPLEnd guifg=#658594 guibg=#16161D
 
 let s:green = "#98BB6C"
+let s:black = "#16161D"
 function! Dohi(name, fg, bg, gui)
   let l:string = a:name . ' guifg=' . a:fg . ' guibg=' . a:bg
   if (a:gui != '')
     let l:string .= ' gui=' . a:gui
   endif
-  echo l:string
   execute 'hi ' . l:string 
 endfunction
 call Dohi('SLDiagnostic', '#2B3328', s:green, '')
-call Dohi('SLDiagnosticPL', s:green, '#16161D', '')
+call Dohi('SLDiagnosticPL', s:green, s:black, '')
 "execute 'hi SLDiagnostic guifg=#2B3328 guibg=' . s:green
 "execute 'hi SLDiagnosticPL guifg=' . s:green . ' guibg=#16161D'
 "hi! SLDiagnostic guifg=#2B3328 guibg=s:green
