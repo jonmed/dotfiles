@@ -100,9 +100,6 @@ function! Is_coc_diagnostic_enabled ()
   endif
 endfunction
 
-
-
-
 function! Dohi(name, fg, bg, gui)
   let l:string = a:name . ' guifg=' . a:fg . ' guibg=' . a:bg
   if (a:gui != '')
@@ -127,7 +124,6 @@ let s:old_white = "#C8C093"
 let s:ffg = s:sumlink0
 let s:fbg = s:old_white
 
-hi! SLFilePLEnd guifg=#C8C093 guibg=#16161D
 call Dohi('SLFile', s:ffg, s:fbg, 'bold')
 call Dohi('SLFilePL', s:fbg, s:ffbg, 'bold')
 call Dohi('SLFilePLEnd', s:fbg, s:black, 'bold')
@@ -141,9 +137,6 @@ call Dohi('SLDiagnosticPL', s:green, s:black, '')
 
 hi! VertSplit guifg=#363646 guibg=#1F1F28
 
-
-"Normal         xxx guifg=#DCD7BA guibg=#1F1F28
-"VertSplit      xxx cterm=reverse guifg=#16161D guibg=#16161D
 " To insert result of vim command into buffer
 " :put=Exec('hi Statusline')
 function! Exec(command)
