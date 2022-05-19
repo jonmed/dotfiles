@@ -133,7 +133,7 @@ let s:fbg = s:sumiInk3
 let s:fffg = s:spring_violet1
 let s:ffbg = s:sumiInk0
 let s:bfg = s:dragon_blue
-let s:bbg = s:winter_blue
+let s:bbg = s:sumiInk0
 let s:dfg = s:spring_green
 let s:dbg = s:winter_green
 
