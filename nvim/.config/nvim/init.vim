@@ -136,7 +136,7 @@ let s:dbg = s:winter_green
 
 call Dohi('SLFile', s:ffg, s:fbg, '')
 call Dohi('SLFileFormat', s:ffbg, s:fffg, 'bold')
-call Dohi('SLBranch', s:bfg, s:bbg, 'bold')
+call Dohi('SLBranch', s:bbg, s:bfg, 'bold')
 call Dohi('SLDiagnostic', s:dfg, s:dbg, '')
 
 " To insert result of vim command into buffer
