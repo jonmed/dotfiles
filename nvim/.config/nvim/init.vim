@@ -110,21 +110,21 @@ endfunction
 
 let s:spring_green = "#98BB6C"
 let s:winter_green = "#2B3328"
-let s:dfg = s:spring_green
-let s:dbg = s:winter_green
 let s:sumlink0 = "#16161D"
 let s:sumlink2 = "#2A2A37"
-let s:black = s:sumlink0 
 let s:dragon_blue = "#658594"
 let s:wave_blue1 = "#223249"
-let s:bfg = s:wave_blue1
-let s:bbg = s:dragon_blue
 let s:spring_violet1 = "#938AA9"
-let s:ffbg = s:spring_violet1
-let s:fffg = s:sumlink2
 let s:old_white = "#C8C093"
+let s:black = s:sumlink0 
 let s:ffg = s:sumlink0
 let s:fbg = s:old_white
+let s:ffbg = s:spring_violet1
+let s:fffg = s:sumlink2
+let s:bfg = s:wave_blue1
+let s:bbg = s:dragon_blue
+let s:dfg = s:spring_green
+let s:dbg = s:winter_green
 
 call Dohi('SLFile', s:ffg, s:fbg, 'bold')
 call Dohi('SLFilePL', s:fbg, s:ffbg, 'bold')
