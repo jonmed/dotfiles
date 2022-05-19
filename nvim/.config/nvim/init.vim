@@ -115,7 +115,8 @@ let s:winter_green = "#2B3328"
 let s:green = s:winter_green
 let s:sumlink0 = "#16161D"
 let s:black = s:sumlink0 
-let s:blue = "#658594"
+let s:dragon_blue = "#658594"
+let s:blue = s:dragon_blue
 function! Dohi(name, fg, bg, gui)
   let l:string = a:name . ' guifg=' . a:fg . ' guibg=' . a:bg
   if (a:gui != '')
