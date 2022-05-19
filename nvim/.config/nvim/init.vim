@@ -129,8 +129,8 @@ let s:ffg = s:old_white
 let s:fbg = s:sumlink3
 let s:fffg = s:spring_violet1
 let s:ffbg = s:sumlink2
-let s:bfg = s:wave_blue1
-let s:bbg = s:dragon_blue
+let s:bfg = s:dragon_blue
+let s:bbg = s:wave_blue1
 let s:dfg = s:spring_green
 let s:dbg = s:winter_green
 
