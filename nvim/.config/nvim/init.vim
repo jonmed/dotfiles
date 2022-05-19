@@ -101,9 +101,6 @@ function! Is_coc_diagnostic_enabled ()
 endfunction
 
 
-hi! SLFile guifg=#C8C093 guibg=#16161D gui=bold,reverse
-hi! SLFilePL guifg=#C8C093 guibg=#938AA9
-hi! SLFilePLEnd guifg=#C8C093 guibg=#16161D
 
 
 function! Dohi(name, fg, bg, gui)
@@ -126,8 +123,14 @@ let s:blue = s:dragon_blue
 let s:spring_violet1 = "#938AA9"
 let s:ffbg = s:spring_violet1
 let s:fffg = s:sumlink2
+let s:ffg = s:sumlink0
+let s:old_white = "#C8C093"
+let s:fbg = s:old_white
 
-hi! SLFileFormat guifg=#938AA9 guibg=#2A2A37 gui=bold,reverse
+hi! SLFile guifg=#C8C093 guibg=#16161D gui=bold,reverse
+hi! SLFilePL guifg=#C8C093 guibg=#938AA9
+hi! SLFilePLEnd guifg=#C8C093 guibg=#16161D
+call Dohi('SLFile', s:ffg, s:fbg, 'bold')
 call Dohi('SLFileFormat', s:fffg, s:ffbg, 'bold')
 call Dohi('SLFileFormatPL', s:ffbg, s:blue, '')
 call Dohi('SLBranch', s:wave_blue1, s:blue, 'bold')
