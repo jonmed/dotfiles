@@ -135,7 +135,7 @@ let s:dfg = s:spring_green
 let s:dbg = s:winter_green
 
 call Dohi('SLFile', s:ffg, s:fbg, '')
-call Dohi('SLFileFormat', s:fffg, s:ffbg, 'bold')
+call Dohi('SLFileFormat', s:ffbg, s:fffg, 'bold')
 call Dohi('SLBranch', s:bfg, s:bbg, 'bold')
 call Dohi('SLDiagnostic', s:dfg, s:dbg, '')
 
