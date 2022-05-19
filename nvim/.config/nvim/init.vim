@@ -116,6 +116,7 @@ let s:green = s:winter_green
 let s:sumlink0 = "#16161D"
 let s:black = s:sumlink0 
 let s:dragon_blue = "#658594"
+let s:wave_blue1 = "#223249"
 let s:blue = s:dragon_blue
 function! Dohi(name, fg, bg, gui)
   let l:string = a:name . ' guifg=' . a:fg . ' guibg=' . a:bg
@@ -124,6 +125,7 @@ function! Dohi(name, fg, bg, gui)
   endif
   execute 'hi ' . l:string 
 endfunction
+call Dohi('SLBranch', s:blue, s:wave_blue1, 'bold,reverse')
 call Dohi('SLBranchPL', s:blue, s:green, '')
 call Dohi('SLBranchPLEnd', s:blue, s:black, '')
 call Dohi('SLDiagnostic', s:spring_green, s:green, '')
