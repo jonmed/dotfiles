@@ -111,8 +111,8 @@ hi! SLBranch guifg=#658594 guibg=#223249 gui=bold,reverse
 hi! SLBranchPL guifg=#658594 guibg=#2B3328
 hi! SLBranchPLEnd guifg=#658594 guibg=#16161D
 
-hi! SLDiagnostic guibg=#2B3328
-hi! SLDiagnosticPL guifg=#2B3328 guibg=#16161D
+hi! SLDiagnostic guibg=#76946A
+hi! SLDiagnosticPL guifg=#76946A guibg=#16161D
 
 hi! VertSplit guifg=#363646 guibg=#1F1F28
 
