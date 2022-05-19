@@ -126,7 +126,8 @@ function! StatuslineGen(winid) abort
   if (a:winid == win_getid())
     let l:sl .= "%<%#SLFile#\ %f\ %m%r\ "
     let l:sl .= "%{%&ft==''?'%#SLFileNFFPL#\ue0b0\ %#Statusline#':'%#SLFilePL#\ue0b0%#SLFileFormat#\ '..&ft..'\ %#SLFileFormatPL#\ue0b0%#Statusline#\ '%}"
-    "return "%{%Is_coc_diagnostic_enabled()%}%=\ \ \ %3l/%L\ :\ %-2v"
+    let l:sl .= "%{%Is_coc_diagnostic_enabled()%}"
+    let l:sl .= "%=\ \ \ %3l/%L\ :\ %-2v"
   else
     let l:sl .= "%<\ %f\ %m%r"
   endif
