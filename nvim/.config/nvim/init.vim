@@ -119,6 +119,7 @@ let s:crystal_blue = "#7E9CD8"
 let s:spring_violet1 = "#938AA9"
 let s:fuji_gray = "#727169"
 let s:oni_violet = "#957FB8"
+let s:autumn_yellow = "#DCA561"
 let s:black = s:sumlink0 
 let s:ffg = s:sumlink0
 let s:fbg = s:old_white
