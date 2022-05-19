@@ -109,12 +109,12 @@ hi! SLFileFormat guifg=#938AA9 guibg=#2A2A37 gui=bold,reverse
 hi! SLFileFormatPL guifg=#938AA9 guibg=#658594
 
 hi! SLBranch guifg=#658594 guibg=#223249 gui=bold,reverse
-hi! SLBranchPLEnd guifg=#658594 guibg=#16161D
 
 let s:spring_green = "#98BB6C"
 let s:winter_green = "#2B3328"
 let s:green = s:winter_green
-let s:black = "#16161D"
+let s:sumlink0 = "#16161D"
+let s:black = s:sumlink0 
 let s:blue = "#658594"
 function! Dohi(name, fg, bg, gui)
   let l:string = a:name . ' guifg=' . a:fg . ' guibg=' . a:bg
