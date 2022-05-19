@@ -87,7 +87,7 @@ function! Is_coc_diagnostic_enabled ()
   if (s:coc_diagnostic_enabled == 1)
     return "%{%&ft==''?'%#SLFileNFFPL#\ue0b0':'%#SLFileFormatPL#\ue0b0'%}%#SLDiagnostic#\ \ %#SLDiagnosticPL#\ue0b0"
   else
-    return "%{%&ft==''?'%#SLFileNFFNDPL#\ue0b0':'%#SLFileFormatPL#\ue0b0'%}%#StatuslineNC#\ \ "
+    return "%{%&ft==''?'%#SLFileNFFNDPL#\ue0b0':'%#SLFileFormatNDPL#\ue0b0'%}%#StatuslineNC#\ \ "
   endif
 endfunction
 
