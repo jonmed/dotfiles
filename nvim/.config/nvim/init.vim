@@ -123,6 +123,10 @@ function! Exec(command)
   return output
 endfunction
 
+function! GitBranch()
+  return execute('!git branch --show-current')
+endfunction
+
 function! DisableSL()
   return "%#Normal#\ "
 endfunction
