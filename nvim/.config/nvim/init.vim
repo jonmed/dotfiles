@@ -112,6 +112,7 @@ function! Dohi(name, fg, bg, gui)
 endfunction
 
 let s:sumlink0 = "#16161D"
+let s:sumlink1 = "#1F1F28"
 let s:sumlink2 = "#2A2A37"
 let s:sumlink3 = "#363646"
 let s:old_white = "#C8C093"
