@@ -127,7 +127,7 @@ let s:blue = s:dragon_blue
 let s:spring_violet1 = "#938AA9"
 let s:violet = s:spring_violet1
 
-call Dohi('SLFileFormatPL', s:blue, s:green, '')
+call Dohi('SLFileFormatPL', s:violet, s:blue, '')
 call Dohi('SLBranch', s:blue, s:wave_blue1, 'bold,reverse')
 call Dohi('SLBranchPL', s:blue, s:green, '')
 call Dohi('SLBranchPLEnd', s:blue, s:black, '')
