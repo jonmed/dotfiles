@@ -265,6 +265,11 @@ augroup close_nvimtree_if_last_window
   autocmd BufEnter * ++nested if winnr('$') == 1 && bufname() == 'NvimTree_' . tabpagenr() | quit | endif
 augroup END
 
+augroup no_statusline_nvimtree 
+  autocmd!
+  autocmd BufEnter NvimTree setlocal statusline=" " 
+augroup END
+
 augroup python 
   au!
   au FileType python setlocal tabstop=4 shiftwidth=4
