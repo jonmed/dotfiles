@@ -109,7 +109,7 @@ hi! SLFileFormatPL guifg=#938AA9 guibg=#2B3328
 hi! SLFileFormatNDPL guifg=#938AA9 guibg=#16161D
 hi! SLDiagnostic guibg=#2B3328
 hi! SLDiagnosticPL guifg=#2B3328 guibg=#16161D
-hi! VertSplit guifg=#555555 guibg=#1F1F28
+hi! VertSplit guifg=#363646 guibg=#1F1F28
 
 
 "Normal         xxx guifg=#DCD7BA guibg=#1F1F28
