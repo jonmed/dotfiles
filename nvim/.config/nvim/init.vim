@@ -94,7 +94,7 @@ endfunction
 
 function! Is_coc_diagnostic_enabled ()
   if (s:coc_diagnostic_enabled == 1)
-    return "'%}%#SLDiagnostic#\ \ %#SLDiagnosticPL#"
+    return "%#SLDiagnostic#\ \ %#SLDiagnosticPL#"
   else
     return "%{%&ft==''?'%#SLFileNFFNDPL#':'%#SLFileFormatNDPL#'%}%#StatuslineNC#\ \ "
   endif
