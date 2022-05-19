@@ -85,9 +85,9 @@ let s:coc_diagnostic_enabled = 1
 
 function! Is_coc_diagnostic_enabled ()
   if (s:coc_diagnostic_enabled == 1)
-    return "Diagnostics ON"
+    return " ON"
   else
-    return "%#StatuslineNC#Diagnostics OFF%#Statusline#"
+    return "%#StatuslineNC# OFF%#Statusline#"
   endif
 endfunction
 
