@@ -109,7 +109,6 @@ hi! SLFileFormat guifg=#938AA9 guibg=#2A2A37 gui=bold,reverse
 hi! SLFileFormatPL guifg=#938AA9 guibg=#658594
 
 hi! SLBranch guifg=#658594 guibg=#223249 gui=bold,reverse
-hi! SLBranchPL guifg=#658594 guibg=s:green
 hi! SLBranchPLEnd guifg=#658594 guibg=#16161D
 
 let s:spring_green = "#98BB6C"
@@ -124,9 +123,10 @@ function! Dohi(name, fg, bg, gui)
   endif
   execute 'hi ' . l:string 
 endfunction
+call Dohi('SLBranchPL', s:blue, s:green, '')
+call Dohi('SLBranchPLEnd', s:blue, s:black, '')
 call Dohi('SLDiagnostic', s:spring_green, s:green, '')
 call Dohi('SLDiagnosticPL', s:green, s:black, '')
-call Dohi('SLBranchPL', s:blue, s:green, '')
 "execute 'hi SLDiagnostic guifg=#2B3328 guibg=' . s:green
 "execute 'hi SLDiagnosticPL guifg=' . s:green . ' guibg=#16161D'
 "hi! SLDiagnostic guifg=#2B3328 guibg=s:green
