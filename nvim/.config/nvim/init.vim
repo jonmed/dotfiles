@@ -127,16 +127,16 @@ let s:autumn_yellow = "#DCA561"
 let s:black = s:sumlink0 
 let s:ffg = s:old_white
 let s:fbg = s:sumlink3
-let s:ffbg = s:spring_violet1
-let s:fffg = s:sumlink2
+let s:fffg = s:spring_violet1
+let s:ffbg = s:sumlink2
 let s:bfg = s:wave_blue1
 let s:bbg = s:dragon_blue
 let s:dfg = s:spring_green
 let s:dbg = s:winter_green
 
 call Dohi('SLFile', s:ffg, s:fbg, '')
-call Dohi('SLFileFormat', s:ffbg, s:fffg, 'bold')
-call Dohi('SLBranch', s:bbg, s:bfg, 'bold')
+call Dohi('SLFileFormat', s:fffg, s:ffbg, 'bold')
+call Dohi('SLBranch', s:bfg, s:bbg, 'bold')
 call Dohi('SLDiagnostic', s:dfg, s:dbg, '')
 
 " To insert result of vim command into buffer
