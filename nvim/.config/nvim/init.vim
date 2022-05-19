@@ -111,10 +111,10 @@ function! Dohi(name, fg, bg, gui)
   execute 'hi ' . l:string 
 endfunction
 
-let s:sumlink0 = "#16161D"
-let s:sumlink1 = "#1F1F28"
-let s:sumlink2 = "#2A2A37"
-let s:sumlink3 = "#363646"
+let s:sumiInk0 = "#16161D"
+let s:sumiInk1 = "#1F1F28"
+let s:sumiInk2 = "#2A2A37"
+let s:sumiInk3 = "#363646"
 let s:old_white = "#C8C093"
 let s:spring_green = "#98BB6C"
 let s:winter_green = "#2B3328"
@@ -127,11 +127,11 @@ let s:spring_violet1 = "#938AA9"
 let s:fuji_gray = "#727169"
 let s:oni_violet = "#957FB8"
 let s:autumn_yellow = "#DCA561"
-let s:black = s:sumlink0 
+let s:black = s:sumiInk0 
 let s:ffg = s:old_white
-let s:fbg = s:sumlink3
+let s:fbg = s:sumiInk3
 let s:fffg = s:spring_violet1
-let s:ffbg = s:sumlink2
+let s:ffbg = s:sumiInk2
 let s:bfg = s:dragon_blue
 let s:bbg = s:winter_blue
 let s:dfg = s:spring_green
