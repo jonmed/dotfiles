@@ -110,14 +110,6 @@ hi! SLFileFormatNDPL guifg=#938AA9 guibg=#16161D
 hi! SLDiagnostic guibg=#2B3328
 hi! SLDiagnosticPL guifg=#2B3328 guibg=#16161D
 
-
-
-"DiffAdd        xxx ctermbg=4 guibg=#2B3328
-"Folded         xxx ctermfg=14 ctermbg=242 guifg=#938AA9 guibg=#2A2A37
-
-"StatusLine     xxx cterm=bold,reverse guifg=#C8C093 guibg=#16161D
-"Normal         xxx guifg=#DCD7BA guibg=#1F1F28
-"TermCursor     xxx cterm=reverse gui=reverse
 " To insert result of vim command into buffer
 " :put=Exec('hi Statusline')
 function! Exec(command)
