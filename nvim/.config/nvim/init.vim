@@ -101,8 +101,13 @@ function! ToggleDiagnostic ()
 endfunction
 
 hi! SLFile guibg=#727169 guifg=#16161D gui=bold
+hi! SLFile gui=bold,reverse
 hi! SLFilePL guibg=#16161D guifg=#727169
 
+
+
+"Normal         xxx guifg=#DCD7BA guibg=#1F1F28
+"TermCursor     xxx cterm=reverse gui=reverse
 " To insert result of vim command into buffer
 " :put=Exec('hi Statusline')
 function! Exec(command)
