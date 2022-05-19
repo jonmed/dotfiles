@@ -102,7 +102,8 @@ endfunction
 
 hi! SLFile guifg=#C8C093 guibg=#16161D gui=bold,reverse
 hi! SLFilePL guifg=#C8C093 guibg=#2A2A37
-hi! SLFileFormat guifg=#938AA9 guibg=#2A2A37
+hi! SLFileFormat guifg=#938AA9 guibg=#2A2A37, gui=bold,reverse
+hi! SLFileFormatPL guifg=#938AA9 guibg=#2A2A37
 
 
 "Folded         xxx ctermfg=14 ctermbg=242 guifg=#938AA9 guibg=#2A2A37
