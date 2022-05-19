@@ -266,7 +266,7 @@ augroup close_nvimtree_if_last_window
 augroup END
 
 function! DisableSL()
-  return " "
+  return "%{%%#Normal#\ %}"
 endfunction
 
 augroup no_statusline_nvimtree 
