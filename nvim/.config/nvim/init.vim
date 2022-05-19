@@ -122,13 +122,13 @@ function! Exec(command)
 endfunction
 
 function! StatuslineGen(winid) abort
-  l:sl = ''
+  let l:sl = ''
   if (a:winid == win_getid())
-    l:sl += "a"
-    l:sl += "b"
+    let l:sl += "a"
+    let l:sl += "b"
     "return "%<%#SLFile#\ %f\ %m%r\ %{%&ft==''?'%#SLFileNFFPL#\ue0b0\ %#Statusline#':'%#SLFilePL#\ue0b0%#SLFileFormat#\ '..&ft..'\ %#SLFileFormatPL#\ue0b0%#Statusline#\ '%}%{%Is_coc_diagnostic_enabled()%}%=\ \ \ %3l/%L\ :\ %-2v"
   else
-    l:sl += "c"
+    let l:sl += "c"
     "return "%<\ %f\ %m%r"
   endif
   return l:sl
