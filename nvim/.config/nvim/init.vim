@@ -116,13 +116,11 @@ function! Dohi()
   let l:string = 'hi ' . a:0 . 'guifg=' . a:1 . ' guibg=' . a:2 
   if (a:3 != '')
     let l:string .= ' gui=' . a:3
-
-
-  execute  . ' gui=' . a:3
+  endif
+  execute l:string 
 endfunction
-Dohi('SLDiagnostic', '#2B3328', s:green, '')
-execute 'hi SLDiagnostic guifg=#2B3328 guibg=' . s:green
-execute 'hi SLDiagnostic guifg=#2B3328 guibg=' . s:green
+call Dohi('SLDiagnostic', '#2B3328', s:green, '')
+"execute 'hi SLDiagnostic guifg=#2B3328 guibg=' . s:green
 execute 'hi SLDiagnosticPL guifg=' . s:green . ' guibg=#16161D'
 "hi! SLDiagnostic guifg=#2B3328 guibg=s:green
 "hi! SLDiagnosticPL guifg=s:green guibg=#16161D
