@@ -134,8 +134,6 @@ function! StatuslineGen(winid) abort
 endfunction
 
 set statusline=%!StatuslineGen(g:statusline_winid)
-"set statusline+=%<%f\ %m%r\ \ %{&ft==''?'':&ft..'\ \ '}%{%Is_coc_diagnostic_enabled()%}
-"et statusline+=%=\ \ \ %3l/%L\ :\ %-2v
 
 " File Explorer
 lua << END
