@@ -3,7 +3,7 @@ let mapleader = " "
 if has("nvim")
   let g:plug_home = stdpath('data') . '/plugged'
 endif
-
+
 call plug#begin()
 Plug 'lewis6991/impatient.nvim'
 Plug 'dstein64/vim-startuptime'
@@ -94,9 +94,9 @@ endfunction
 
 function! Is_coc_diagnostic_enabled ()
   if (s:coc_diagnostic_enabled == 1)
-    return "%{%&ft==''?'%#SLFileNFFPL#\ue0b0':'%#SLFileFormatPL#\ue0b0'%}%#SLDiagnostic#\ \ %#SLDiagnosticPL#\ue0b0"
+    return "%{%&ft==''?'%#SLFileNFFPL#':'%#SLFileFormatPL#'%}%#SLDiagnostic#\ \ %#SLDiagnosticPL#"
   else
-    return "%{%&ft==''?'%#SLFileNFFNDPL#\ue0b0':'%#SLFileFormatNDPL#\ue0b0'%}%#StatuslineNC#\ \ "
+    return "%{%&ft==''?'%#SLFileNFFNDPL#':'%#SLFileFormatNDPL#'%}%#StatuslineNC#\ \ "
   endif
 endfunction
 
@@ -124,7 +124,7 @@ function! StatuslineGen(winid) abort
   if (a:winid == win_getid())
     let l:ffpl = "%#SLFileFormat#\ ".&ft."\ "
     let l:sl .= "%<%#SLFile#\ %f\ %m%r\ "
-    let l:sl .= "%{%&ft==''?'':'%#SLFilePL#\ue0b0".l:ffpl."'%}"
+    let l:sl .= "%{%&ft==''?'':'%#SLFilePL#".l:ffpl."'%}"
     let l:sl .= "%{%Is_coc_diagnostic_enabled()%}%#Statusline#"
     let l:sl .= "%=\ %#SLFileNFFNDPL#\ue0b2%#SLFile#\ \ %3l/%L\ :\ %-2v\ "
   else
