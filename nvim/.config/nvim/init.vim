@@ -113,6 +113,7 @@ endfunction
 
 let s:sumlink0 = "#16161D"
 let s:sumlink2 = "#2A2A37"
+let s:sumlink3 = "#363646"
 let s:old_white = "#C8C093"
 let s:spring_green = "#98BB6C"
 let s:winter_green = "#2B3328"
