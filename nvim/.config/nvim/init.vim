@@ -108,14 +108,14 @@ function! Dohi(name, fg, bg, gui)
   execute 'hi ' . l:string 
 endfunction
 
-let s:spring_green = "#98BB6C"
-let s:winter_green = "#2B3328"
 let s:sumlink0 = "#16161D"
 let s:sumlink2 = "#2A2A37"
+let s:old_white = "#C8C093"
+let s:spring_green = "#98BB6C"
+let s:winter_green = "#2B3328"
 let s:dragon_blue = "#658594"
 let s:wave_blue1 = "#223249"
 let s:spring_violet1 = "#938AA9"
-let s:old_white = "#C8C093"
 let s:black = s:sumlink0 
 let s:ffg = s:sumlink0
 let s:fbg = s:old_white
