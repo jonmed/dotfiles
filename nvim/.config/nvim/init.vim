@@ -105,8 +105,11 @@ hi! SLFilePL guifg=#C8C093 guibg=#938AA9
 hi! SLFileNFFPL guifg=#C8C093 guibg=#16161D
 hi! SLFileFormat guifg=#938AA9 guibg=#2A2A37 gui=bold,reverse
 hi! SLFileFormatPL guifg=#938AA9 guibg=#16161D
+hi! SLDiagnostic guibg=#2B3328
 
 
+
+"DiffAdd        xxx ctermbg=4 guibg=#2B3328
 "Folded         xxx ctermfg=14 ctermbg=242 guifg=#938AA9 guibg=#2A2A37
 
 "StatusLine     xxx cterm=bold,reverse guifg=#C8C093 guibg=#16161D
