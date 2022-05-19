@@ -110,7 +110,8 @@ endfunction
 
 let s:spring_green = "#98BB6C"
 let s:winter_green = "#2B3328"
-let s:green = s:winter_green
+let s:dfg = s:spring_green
+let s:dbg = s:winter_green
 let s:sumlink0 = "#16161D"
 let s:sumlink2 = "#2A2A37"
 let s:black = s:sumlink0 
@@ -131,10 +132,10 @@ call Dohi('SLFilePLEnd', s:fbg, s:black, 'bold')
 call Dohi('SLFileFormat', s:fffg, s:ffbg, 'bold')
 call Dohi('SLFileFormatPL', s:ffbg, s:bbg, '')
 call Dohi('SLBranch', s:bfg, s:bbg, 'bold')
-call Dohi('SLBranchPL', s:bbg, s:green, '')
+call Dohi('SLBranchPL', s:bbg, s:dbg, '')
 call Dohi('SLBranchPLEnd', s:bbg, s:black, '')
-call Dohi('SLDiagnostic', s:spring_green, s:green, '')
-call Dohi('SLDiagnosticPL', s:green, s:black, '')
+call Dohi('SLDiagnostic', s:dfg, s:dbg, '')
+call Dohi('SLDiagnosticPL', s:dbg, s:black, '')
 
 hi! VertSplit guifg=#363646 guibg=#1F1F28
 
