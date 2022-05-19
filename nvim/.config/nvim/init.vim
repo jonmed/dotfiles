@@ -123,7 +123,7 @@ endfunction
 
 function! StatuslineGen(winid) abort
   if (a:winid == win_getid())
-    return "%<%#SLFile#\ %f\ %m%r\ %{%&ft==''?'%#SLFileNFFPL#\ue0b0%#Statusline#':'%#SLFilePL#\ue0b0\ '..&ft..'\ %#SLFileFormatPL#\ue0b0%#Statusline#\ '%}%{%Is_coc_diagnostic_enabled()%}%=\ \ \ %3l/%L\ :\ %-2v"
+    return "%<%#SLFile#\ %f\ %m%r\ %{%&ft==''?'%#SLFileNFFPL#\ue0b0\ %#Statusline#':'%#SLFilePL#\ue0b0\ '..&ft..'\ %#SLFileFormatPL#\ue0b0%#Statusline#\ '%}%{%Is_coc_diagnostic_enabled()%}%=\ \ \ %3l/%L\ :\ %-2v"
   else
     return "%<\ %f\ %m%r"
   endif
