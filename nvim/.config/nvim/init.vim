@@ -105,7 +105,6 @@ hi! SLFile guifg=#C8C093 guibg=#16161D gui=bold,reverse
 hi! SLFilePL guifg=#C8C093 guibg=#938AA9
 hi! SLFilePLEnd guifg=#C8C093 guibg=#16161D
 
-hi! SLFileFormat guifg=#938AA9 guibg=#2A2A37 gui=bold,reverse
 
 function! Dohi(name, fg, bg, gui)
   let l:string = a:name . ' guifg=' . a:fg . ' guibg=' . a:bg
@@ -124,10 +123,12 @@ let s:dragon_blue = "#658594"
 let s:wave_blue1 = "#223249"
 let s:blue = s:dragon_blue
 let s:spring_violet1 = "#938AA9"
+let s:sumlink2 = "#2A2A37"
 let s:ffbg = s:spring_violet1
 
+hi! SLFileFormat guifg=#938AA9 guibg=#2A2A37 gui=bold,reverse
+call Dohi('SLFileFormat', s:ffbg, s:blue, '')
 call Dohi('SLFileFormatPL', s:ffbg, s:blue, '')
-call Dohi('SLFileFormatPL', s:violet, s:blue, '')
 call Dohi('SLBranch', s:blue, s:wave_blue1, 'bold,reverse')
 call Dohi('SLBranchPL', s:blue, s:green, '')
 call Dohi('SLBranchPLEnd', s:blue, s:black, '')
