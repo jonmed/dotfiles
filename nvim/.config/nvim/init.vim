@@ -123,6 +123,10 @@ function! Exec(command)
   return output
 endfunction
 
+function! DisableSL()
+  return "%#Normal#\ "
+endfunction
+
 function! StatuslineGen(winid) abort
   let l:sl = ''
   if (a:winid == win_getid())
@@ -268,10 +272,6 @@ augroup close_nvimtree_if_last_window
   autocmd!
   autocmd BufEnter * ++nested if winnr('$') == 1 && bufname() == 'NvimTree_' . tabpagenr() | quit | endif
 augroup END
-
-function! DisableSL()
-  return "%#Normal#\ "
-endfunction
 
 augroup no_statusline_nvimtree 
   autocmd!
