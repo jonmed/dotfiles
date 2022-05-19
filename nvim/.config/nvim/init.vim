@@ -113,7 +113,12 @@ hi! SLBranch guifg=#658594 guibg=#223249 gui=bold,reverse
 hi! SLBranchPL guifg=#658594 guibg=s:green
 hi! SLBranchPLEnd guifg=#658594 guibg=#16161D
 function! Dohi()
-  execute 'hi ' . a:0 . 'guifg=' . a:1 . ' guibg=' . a:2 . ' gui=' . a:3
+  let l:string = 'hi ' . a:0 . 'guifg=' . a:1 . ' guibg=' . a:2 
+  if (a:3 != '')
+    let l:string .= ' gui=' . a:3
+
+
+  execute  . ' gui=' . a:3
 endfunction
 Dohi('SLDiagnostic', '#2B3328', s:green, '')
 execute 'hi SLDiagnostic guifg=#2B3328 guibg=' . s:green
