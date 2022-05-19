@@ -119,6 +119,7 @@ let s:spring_green = "#98BB6C"
 let s:winter_green = "#2B3328"
 let s:dragon_blue = "#658594"
 let s:wave_blue1 = "#223249"
+let s:winter_blue = "#252535"
 let s:crystal_blue = "#7E9CD8"
 let s:spring_violet1 = "#938AA9"
 let s:fuji_gray = "#727169"
@@ -130,7 +131,7 @@ let s:fbg = s:sumlink3
 let s:fffg = s:spring_violet1
 let s:ffbg = s:sumlink2
 let s:bfg = s:dragon_blue
-let s:bbg = s:wave_blue1
+let s:bbg = s:winter_blue
 let s:dfg = s:spring_green
 let s:dbg = s:winter_green
 
