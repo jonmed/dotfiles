@@ -112,10 +112,10 @@ hi! SLFileFormatPL guifg=#938AA9 guibg=#658594
 hi! SLBranch guifg=#658594 guibg=#223249 gui=bold,reverse
 hi! SLBranchPL guifg=#658594 guibg=s:green
 hi! SLBranchPLEnd guifg=#658594 guibg=#16161D
-function! Dohi()
-  let l:string = 'hi ' . a:0 . 'guifg=' . a:1 . ' guibg=' . a:2 
-  if (a:3 != '')
-    let l:string .= ' gui=' . a:3
+function! Dohi(name, fg, bg, gui)
+  let l:string = 'hi ' . a:name . 'guifg=' . a:fg . ' guibg=' . a:bg
+  if (a:gui != '')
+    let l:string .= ' gui=' . a:gui
   endif
   execute l:string 
 endfunction
