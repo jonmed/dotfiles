@@ -101,7 +101,7 @@ function! ToggleDiagnostic ()
 endfunction
 
 "hi! SLFile guibg=#727169 guifg=#16161D gui=bold
-hi! SLFile guifg=#DCD7BA guibg=#1F1F28 gui=bold,reverse
+hi! SLFile gui=bold,reverse
 hi! SLFilePL guibg=#16161D guifg=#727169
 
 
