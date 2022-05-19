@@ -128,7 +128,7 @@ function! StatuslineGen(winid) abort
     let l:sl .= "%<%#SLFile#\ %f\ %m%r\ "
     let l:sl .= "%{%&ft==''?'%#SLFileNFFPL#\ue0b0':'%#SLFilePL#\ue0b0".l:ffpl."'%}"
     let l:sl .= "%#Statusline#\ %{%Is_coc_diagnostic_enabled()%}"
-    let l:sl .= "%=\ %#SLFilePLBack#\ue0b2%#SLFile#\ \ %3l/%L\ :\ %-2v\ "
+    let l:sl .= "%=\ %#SLFileNFFPL#\ue0b2%#SLFile#\ \ %3l/%L\ :\ %-2v\ "
   else
     let l:sl .= "%<\ %f\ %m%r"
   endif
