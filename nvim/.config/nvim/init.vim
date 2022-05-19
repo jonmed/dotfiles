@@ -109,7 +109,7 @@ hi! SLFileFormatPL guifg=#938AA9 guibg=#2B3328
 hi! SLFileFormatNDPL guifg=#938AA9 guibg=#16161D
 hi! SLDiagnostic guibg=#2B3328
 hi! SLDiagnosticPL guifg=#2B3328 guibg=#16161D
-hi! VertSplit cterm=reverse guifg=#555555
+hi! VertSplit guifg=#555555
 
 "VertSplit      xxx cterm=reverse guifg=#16161D guibg=#16161D
 " To insert result of vim command into buffer
