@@ -142,6 +142,7 @@ call Dohi('SLDiagnostic', s:dfg, s:dbg, '')
 call Dohi('SLDiagnosticPL', s:dbg, s:black, '')
 
 hi! VertSplit guifg=#363646 guibg=#1F1F28
+hi! Visual gui=reverse
 
 " To insert result of vim command into buffer
 " :put=Exec('hi Statusline')
