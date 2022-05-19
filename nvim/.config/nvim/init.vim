@@ -267,7 +267,7 @@ augroup END
 
 augroup no_statusline_nvimtree 
   autocmd!
-  autocmd BufEnter NvimTree setlocal statusline=" " 
+  autocmd BufEnter NvimTree setlocal statusline="\ " 
 augroup END
 
 augroup python 
