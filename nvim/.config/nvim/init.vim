@@ -162,7 +162,7 @@ endfunction
 let b:git_branch = ''
 
 lua << EOF
-require'nvim-web-devicons'.get_icon_by_filetype(&ft)
+local icon = require'nvim-web-devicons'.get_icon_by_filetype(&ft)
 EOF
 
 function! StatuslineGen(winid) abort
