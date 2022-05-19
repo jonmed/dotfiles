@@ -144,7 +144,6 @@ call Dohi('SLBranchPLEnd', s:bbg, s:black, '')
 call Dohi('SLDiagnostic', s:dfg, s:dbg, '')
 call Dohi('SLDiagnosticPL', s:dbg, s:black, '')
 
-
 " To insert result of vim command into buffer
 " :put=Exec('hi Statusline')
 function! Exec(command)
