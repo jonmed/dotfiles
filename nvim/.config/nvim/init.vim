@@ -265,9 +265,13 @@ augroup close_nvimtree_if_last_window
   autocmd BufEnter * ++nested if winnr('$') == 1 && bufname() == 'NvimTree_' . tabpagenr() | quit | endif
 augroup END
 
+function! DisableSL()
+  return " "
+endfunction
+
 augroup no_statusline_nvimtree 
   autocmd!
-  autocmd BufEnter NvimTree setlocal statusline="" 
+  autocmd BufEnter NvimTree setlocal statusline=%!DisableSL() 
 augroup END
 
 augroup python 
