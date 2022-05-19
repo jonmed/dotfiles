@@ -283,6 +283,11 @@ augroup no_statusline_nvimtree
   autocmd BufEnter * if bufname() == 'NvimTree_' . tabpagenr() | setlocal statusline=%!DisableSL() | endif
 augroup END
 
+augroup get_git_branch 
+  autocmd!
+  autocmd BufEnter * let b:git_brach = GitBranch() 
+augroup END
+
 augroup python 
   au!
   au FileType python setlocal tabstop=4 shiftwidth=4
