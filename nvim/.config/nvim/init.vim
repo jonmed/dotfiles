@@ -108,8 +108,6 @@ hi! SLFilePLEnd guifg=#C8C093 guibg=#16161D
 hi! SLFileFormat guifg=#938AA9 guibg=#2A2A37 gui=bold,reverse
 hi! SLFileFormatPL guifg=#938AA9 guibg=#658594
 
-hi! SLBranch guifg=#658594 guibg=#223249 gui=bold,reverse
-
 let s:spring_green = "#98BB6C"
 let s:winter_green = "#2B3328"
 let s:green = s:winter_green
@@ -130,10 +128,6 @@ call Dohi('SLBranchPL', s:blue, s:green, '')
 call Dohi('SLBranchPLEnd', s:blue, s:black, '')
 call Dohi('SLDiagnostic', s:spring_green, s:green, '')
 call Dohi('SLDiagnosticPL', s:green, s:black, '')
-"execute 'hi SLDiagnostic guifg=#2B3328 guibg=' . s:green
-"execute 'hi SLDiagnosticPL guifg=' . s:green . ' guibg=#16161D'
-"hi! SLDiagnostic guifg=#2B3328 guibg=s:green
-"hi! SLDiagnosticPL guifg=s:green guibg=#16161D
 
 hi! VertSplit guifg=#363646 guibg=#1F1F28
 
