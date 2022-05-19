@@ -131,6 +131,10 @@ function! DisableSL()
   return "%#Normal#\ "
 endfunction
 
+function! PrintGitBranch()
+  if (b:git_branch == '')
+endfunction
+
 let b:git_branch = ''
 
 function! StatuslineGen(winid) abort
