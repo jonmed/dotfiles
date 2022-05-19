@@ -87,7 +87,7 @@ function! Is_coc_diagnostic_enabled ()
   if (s:coc_diagnostic_enabled == 1)
     return ""
   else
-    return "%#WarningMsg#%#Statusline#"
+    return "%#StatuslineNC#%#Statusline#"
   endif
 endfunction
 
