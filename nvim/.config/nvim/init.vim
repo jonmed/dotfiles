@@ -102,6 +102,10 @@ endfunction
 
 hi! SLFile guifg=#C8C093 guibg=#16161D gui=bold,reverse
 hi! SLFilePL guifg=#C8C093 guibg=#16161D
+hi! SLFileFormat guifg=#938AA9 guibg=#2A2A37
+
+
+"Folded         xxx ctermfg=14 ctermbg=242 guifg=#938AA9 guibg=#2A2A37
 
 "StatusLine     xxx cterm=bold,reverse guifg=#C8C093 guibg=#16161D
 "Normal         xxx guifg=#DCD7BA guibg=#1F1F28
