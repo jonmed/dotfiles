@@ -271,7 +271,7 @@ endfunction
 
 augroup no_statusline_nvimtree 
   autocmd!
-  autocmd WinEnter,BufEnter NvimTree setlocal statusline=%!DisableSL() 
+  autocmd BufEnter NvimTree setlocal statusline=%!DisableSL() 
 augroup END
 
 augroup python 
