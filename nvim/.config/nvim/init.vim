@@ -102,6 +102,7 @@ endfunction
 
 hi! SLFile guifg=#C8C093 guibg=#16161D gui=bold,reverse
 hi! SLFilePL guifg=#C8C093 guibg=#938AA9
+hi! SLFilePLEnd guifg=#C8C093 guibg=#16161D
 
 hi! SLFileFormat guifg=#938AA9 guibg=#2A2A37 gui=bold,reverse
 hi! SLFileFormatPL guifg=#938AA9 guibg=#658594
