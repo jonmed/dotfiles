@@ -94,7 +94,7 @@ endfunction
 
 function! Is_coc_diagnostic_enabled ()
   if (s:coc_diagnostic_enabled == 1)
-    return "%{%&ft==''?'%#SLFileNFFPL#':'%#SLFileFormatPL#'%}%#SLDiagnostic#\ \ %#SLDiagnosticPL#"
+    return "'%}%#SLDiagnostic#\ \ %#SLDiagnosticPL#"
   else
     return "%{%&ft==''?'%#SLFileNFFNDPL#':'%#SLFileFormatNDPL#'%}%#StatuslineNC#\ \ "
   endif
@@ -145,7 +145,7 @@ function! StatuslineGen(winid) abort
   let l:sl = ''
   if (a:winid == win_getid())
     let l:ffpl = "%#SLFileFormat#\ ".&ft."\ %#SLFileFormatPL#"
-    let l:sl .= "%<%#SLFile#\ %f\ %m%r\ "
+    let l:sl .= "%<%#SLFile#\ %f\ %m%r\ %#SLFilePL#"
     let l:sl .= "%{%&ft==''?'':'%#SLFilePL#".l:ffpl."'%}"
     let l:sl .= "%#SLBranch#\ \ue0a0%{b:git_branch}\ %#SLBranchPL#"
     let l:sl .= "%{%Is_coc_diagnostic_enabled()%}%#Statusline#"
