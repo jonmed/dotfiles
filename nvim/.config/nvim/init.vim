@@ -100,13 +100,8 @@ function! ToggleDiagnostic ()
   endif
 endfunction
 
-"hi! SLFile guibg=#727169 guifg=#16161D gui=bold
 hi! SLFile guifg=#C8C093 guibg=#16161D gui=bold,reverse
-"hi! SLFilePL guibg=#16161D guifg=#727169
 hi! SLFilePL guifg=#C8C093 guibg=#16161D
-
-
-
 
 "StatusLine     xxx cterm=bold,reverse guifg=#C8C093 guibg=#16161D
 "Normal         xxx guifg=#DCD7BA guibg=#1F1F28
