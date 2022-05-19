@@ -94,9 +94,9 @@ endfunction
 
 function! Is_coc_diagnostic_enabled ()
   if (s:coc_diagnostic_enabled == 1)
-    return "%#SLDiagnostic#\ \ %#SLDiagnosticPL#"
+    return "%#SLBranchPL#%#SLDiagnostic#\ \ %#SLDiagnosticPL#"
   else
-    return "%#SLBranchPLEnd#'%}%#StatuslineNC#\ \ "
+    return "%#SLBranchPLEnd#%#StatuslineNC#\ \ "
   endif
 endfunction
 
