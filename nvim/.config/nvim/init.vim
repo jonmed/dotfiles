@@ -100,6 +100,8 @@ function! Is_coc_diagnostic_enabled ()
   endif
 endfunction
 
+let s:green = #98BB6C
+
 hi! SLFile guifg=#C8C093 guibg=#16161D gui=bold,reverse
 hi! SLFilePL guifg=#C8C093 guibg=#938AA9
 hi! SLFilePLEnd guifg=#C8C093 guibg=#16161D
@@ -108,11 +110,10 @@ hi! SLFileFormat guifg=#938AA9 guibg=#2A2A37 gui=bold,reverse
 hi! SLFileFormatPL guifg=#938AA9 guibg=#658594
 
 hi! SLBranch guifg=#658594 guibg=#223249 gui=bold,reverse
-hi! SLBranchPL guifg=#658594 guibg=#98BB6C
+hi! SLBranchPL guifg=#658594 guibg=s:green
 hi! SLBranchPLEnd guifg=#658594 guibg=#16161D
-
-hi! SLDiagnostic guifg=#2B3328 guibg=#98BB6C
-hi! SLDiagnosticPL guifg=#98BB6C guibg=#16161D
+hi! SLDiagnostic guifg=#2B3328 guibg=s:green
+hi! SLDiagnosticPL guifg=s:green guibg=#16161D
 
 hi! VertSplit guifg=#363646 guibg=#1F1F28
 
