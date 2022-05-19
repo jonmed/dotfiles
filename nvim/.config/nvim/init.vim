@@ -100,7 +100,7 @@ function! Is_coc_diagnostic_enabled ()
   endif
 endfunction
 
-let s:green = #98BB6C
+let s:green = "#98BB6C"
 
 hi! SLFile guifg=#C8C093 guibg=#16161D gui=bold,reverse
 hi! SLFilePL guifg=#C8C093 guibg=#938AA9
