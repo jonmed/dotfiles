@@ -102,7 +102,8 @@ endfunction
 
 "hi! SLFile guibg=#727169 guifg=#16161D gui=bold
 hi! SLFile gui=bold,reverse
-hi! SLFilePL guibg=#16161D guifg=#727169
+"hi! SLFilePL guibg=#16161D guifg=#727169
+hi! SLFilePL gui=bold 
 
 
 
