@@ -80,6 +80,9 @@ set wildignorecase
 " System
 set clipboard+=unnamed,unnamedplus
 
+hi! VertSplit guifg=#363646 guibg=#1F1F28
+hi! Visual gui=reverse
+
 " Statusline
 let s:coc_diagnostic_enabled = 1
 
@@ -141,8 +144,6 @@ call Dohi('SLBranchPLEnd', s:bbg, s:black, '')
 call Dohi('SLDiagnostic', s:dfg, s:dbg, '')
 call Dohi('SLDiagnosticPL', s:dbg, s:black, '')
 
-hi! VertSplit guifg=#363646 guibg=#1F1F28
-hi! Visual gui=reverse
 
 " To insert result of vim command into buffer
 " :put=Exec('hi Statusline')
