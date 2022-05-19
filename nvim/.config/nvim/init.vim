@@ -112,7 +112,7 @@ hi! SLBranch guifg=#658594 guibg=#223249 gui=bold,reverse
 hi! SLBranchPL guifg=#658594 guibg=s:green
 hi! SLBranchPLEnd guifg=#658594 guibg=#16161D
 
-let s:springGreen = "#98BB6C"
+let s:green = "#98BB6C"
 let s:black = "#16161D"
 let s:blue = "#658594"
 function! Dohi(name, fg, bg, gui)
