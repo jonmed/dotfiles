@@ -85,9 +85,9 @@ let s:coc_diagnostic_enabled = 1
 
 function! Is_coc_diagnostic_enabled ()
   if (s:coc_diagnostic_enabled == 1)
-    return ""
+    return "\ "
   else
-    return "%#StatuslineNC#%#Statusline#"
+    return "%#StatuslineNC#\ %#Statusline#"
   endif
 endfunction
 
