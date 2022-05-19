@@ -149,7 +149,7 @@ require('nvim-tree').setup {
   }
 }
 END
-nnoremap <leader>e :NvimTreeToggle<CR>
+nnoremap <silent> <leader>e :NvimTreeToggle<CR>
 
 " markdown-preview
 let g:mkdp_auto_close = 0
