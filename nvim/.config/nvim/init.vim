@@ -97,7 +97,8 @@ endfunction
 
 function! Is_coc_diagnostic_enabled ()
   if (s:coc_diagnostic_enabled == 1)
-    return "%#SLBranchPL#%#SLDiagnostic#\ \ %#SLDiagnosticPL#"
+    "return "%#SLBranchPL#%#SLDiagnostic#\ \ %#SLDiagnosticPL#"
+    return "%#SLDiagnostic#\ \ "
   else
     return "%#SLBranchPLEnd#%#StatuslineNC#\ \ "
   endif
@@ -166,16 +167,29 @@ let b:git_branch = ''
 function! StatuslineGen(winid) abort
   let l:sl = ''
   if (a:winid == win_getid())
-    let l:sl .= "%<%#SLFile#\ %f\ %m%r\ %#SLFilePL#"
-    let l:sl .= "%#SLFileFormat#\ %{&ft==''?'none':&ft}\ %#SLFileFormatPL#"
+    let l:sl .= "%<%#SLFile#\ %f\ %m%r\ "
+    let l:sl .= "%#SLFileFormat#\ %{&ft==''?'none':&ft}\ "
     let l:sl .= "%#SLBranch#\ \ue0a0%{b:git_branch==''?'none':b:git_branch}\ "
     let l:sl .= "%{%Is_coc_diagnostic_enabled()%}%#Statusline#"
-    let l:sl .= "%=\ %#SLFilePLEnd#%#SLFile#\ \ %3l/%L\ :\ %-2v\ "
+    let l:sl .= "%=\ %#SLFile#\ \ %3l/%L\ :\ %-2v\ "
   else
     let l:sl .= "%<\ %f\ %m%r"
   endif
   return l:sl
 endfunction
+"function! StatuslineGen(winid) abort
+"  let l:sl = ''
+"  if (a:winid == win_getid())
+"    let l:sl .= "%<%#SLFile#\ %f\ %m%r\ %#SLFilePL#"
+"    let l:sl .= "%#SLFileFormat#\ %{&ft==''?'none':&ft}\ %#SLFileFormatPL#"
+"    let l:sl .= "%#SLBranch#\ \ue0a0%{b:git_branch==''?'none':b:git_branch}\ "
+"    let l:sl .= "%{%Is_coc_diagnostic_enabled()%}%#Statusline#"
+"    let l:sl .= "%=\ %#SLFilePLEnd#%#SLFile#\ \ %3l/%L\ :\ %-2v\ "
+"  else
+"    let l:sl .= "%<\ %f\ %m%r"
+"  endif
+"  return l:sl
+"endfunction
 
 set statusline=%!StatuslineGen(g:statusline_winid)
 
