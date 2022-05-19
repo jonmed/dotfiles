@@ -1,4 +1,5 @@
 {
   "diagnostic.virtualText": true,
-  "diagnostic.virtualTextLines": 1 
+  "diagnostic.virtualTextLines": 1,
+  "diagnostic.floatConfig": {"border":true}
 }
