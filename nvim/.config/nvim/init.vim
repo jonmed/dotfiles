@@ -112,7 +112,8 @@ hi! SLFileFormatPL guifg=#938AA9 guibg=#658594
 hi! SLBranch guifg=#658594 guibg=#223249 gui=bold,reverse
 hi! SLBranchPL guifg=#658594 guibg=s:green
 hi! SLBranchPLEnd guifg=#658594 guibg=#16161D
-hi! SLDiagnostic guifg=#2B3328 guibg=s:green
+execute 'hi SLDiagnostic guifg=#2B3328 guibg=' . s:green
+"hi! SLDiagnostic guifg=#2B3328 guibg=s:green
 hi! SLDiagnosticPL guifg=s:green guibg=#16161D
 
 hi! VertSplit guifg=#363646 guibg=#1F1F28
