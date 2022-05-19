@@ -124,7 +124,7 @@ function! Exec(command)
 endfunction
 
 function! GitBranch()
-  return execute('!git branch --show-current')
+  return trim(system("git -C " . expand("%:h") . " branch --show-current 2>/dev/null"))
 endfunction
 
 function! DisableSL()
