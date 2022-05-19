@@ -108,6 +108,7 @@ hi! SLFileFormatPL guifg=#938AA9 guibg=#658594
 
 hi! SLBranch guifg=#658594 guibg=#223249 gui=bold,reverse
 hi! SLBranchPL guifg=#658594 guibg=#2B3328
+hi! SLBranchPLEnd guifg=#658594 guibg=#16161D
 
 hi! SLDiagnostic guibg=#2B3328
 hi! SLDiagnosticPL guifg=#2B3328 guibg=#16161D
