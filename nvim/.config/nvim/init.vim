@@ -1,5 +1,5 @@
 let mapleader = " "
-
+
 if has("nvim")
   let g:plug_home = stdpath('data') . '/plugged'
 endif
