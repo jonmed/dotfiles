@@ -117,7 +117,7 @@ function! Dohi(name, fg, bg, gui)
   if (a:gui != '')
     let l:string .= ' gui=' . a:gui
   endif
-  execute l:string . '' 
+  execute expand(l:string) . '' 
 endfunction
 call Dohi('SLDiagnostic', '#2B3328', s:green, '')
 call Dohi('SLDiagnosticPL', s:green, '#16161D', '')
