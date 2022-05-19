@@ -104,7 +104,8 @@ hi! SLFile guifg=#C8C093 guibg=#16161D gui=bold,reverse
 hi! SLFilePL guifg=#C8C093 guibg=#938AA9
 hi! SLFileNFFPL guifg=#C8C093 guibg=#16161D
 hi! SLFileFormat guifg=#938AA9 guibg=#2A2A37 gui=bold,reverse
-hi! SLFileFormatPL guifg=#938AA9 guibg=#16161D
+hi! SLFileFormatPL guifg=#938AA9 guibg=#2B3328
+hi! SLFileFormatNDPL guifg=#938AA9 guibg=#16161D
 hi! SLDiagnostic guibg=#2B3328
 
 
