@@ -100,7 +100,8 @@ function! Is_coc_diagnostic_enabled ()
     "return "%#SLBranchPL#%#SLDiagnostic#\ \ %#SLDiagnosticPL#"
     return "%#SLDiagnostic#\ \ "
   else
-    return "%#SLBranchPLEnd#%#StatuslineNC#\ \ "
+    "return "%#SLBranchPLEnd#%#StatuslineNC#\ \ "
+    return "%#StatuslineNC#\ \ "
   endif
 endfunction
 
