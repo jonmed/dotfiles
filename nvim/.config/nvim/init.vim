@@ -132,7 +132,7 @@ call Dohi('SLFileFormat', s:fffg, s:ffbg, 'bold')
 call Dohi('SLFileFormatPL', s:ffbg, s:blue, '')
 call Dohi('SLBranch', s:bfg, s:bbg, 'bold')
 call Dohi('SLBranchPL', s:bbg, s:green, '')
-call Dohi('SLBranchPLEnd', s:blue, s:black, '')
+call Dohi('SLBranchPLEnd', s:bbg, s:black, '')
 call Dohi('SLDiagnostic', s:spring_green, s:green, '')
 call Dohi('SLDiagnosticPL', s:green, s:black, '')
 
