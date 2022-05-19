@@ -120,8 +120,9 @@ function! Dohi(name, fg, bg, gui)
   execute l:string . '' 
 endfunction
 call Dohi('SLDiagnostic', '#2B3328', s:green, '')
+call Dohi('SLDiagnosticPL', s:green, '#16161D', '')
 "execute 'hi SLDiagnostic guifg=#2B3328 guibg=' . s:green
-execute 'hi SLDiagnosticPL guifg=' . s:green . ' guibg=#16161D'
+"execute 'hi SLDiagnosticPL guifg=' . s:green . ' guibg=#16161D'
 "hi! SLDiagnostic guifg=#2B3328 guibg=s:green
 "hi! SLDiagnosticPL guifg=s:green guibg=#16161D
 
