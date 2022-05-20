@@ -84,19 +84,19 @@ hi! VertSplit guifg=#363646 guibg=#1F1F28
 hi! Visual gui=reverse
 
 " Statusline
-let s:coc_diagnostic_enabled = 1
+let s:diagnostics = 1
 
 function! ToggleDiagnostic ()
   call CocAction('diagnosticToggle')
-  if (s:coc_diagnostic_enabled == 1)
-    let s:coc_diagnostic_enabled = 0
+  if (s:diagnostics == 1)
+    let s:diagnostics = 0
   else
-    let s:coc_diagnostic_enabled = 1
+    let s:diagnostics = 1
   endif
 endfunction
 
 function! Is_coc_diagnostic_enabled ()
-  if (s:coc_diagnostic_enabled == 1)
+  if (s:diagnostics == 1)
     return "%#SLDiagnostic#\ \ "
   else
     return "%#StatuslineNC#\ \ "
@@ -167,7 +167,7 @@ function! StatuslineGen(winid) abort
     let l:sl .= "%<%#SLFile#\ %f\ %m%r\ "
     let l:sl .= "%#SLBranch#%{b:git_branch}\ "
     let l:sl .= "%=%#SLFileFormat#%{&ft}\ "
-    let l:sl .= "%{%Is_coc_diagnostic_enabled()%}%#Statusline#"
+    let l:sl .= "%{%s:diagnostics?'%#SLDiagnostic':'%#StatuslineNC#'%}%#Statusline#"
     let l:sl .= "%#SLFile#\ \ %3l/%L\ :\ %-2v\ "
   else
     let l:sl .= "%<\ %f\ %m%r"
