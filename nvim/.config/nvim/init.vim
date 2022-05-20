@@ -110,19 +110,13 @@ let s:old_white = "#C8C093"
 let s:spring_green = "#98BB6C"
 let s:winter_green = "#2B3328"
 let s:dragon_blue = "#658594"
-let s:ffg = s:old_white
-let s:fbg = s:sumiInk0
-let s:fffg = s:spring_violet1
-let s:ffbg = s:sumiInk0
-let s:bfg = s:dragon_blue
-let s:bbg = s:sumiInk0
 let s:dfg = s:spring_green
 let s:dbg = s:winter_green
 
-call Dohi('SLFile', s:ffg, s:fbg, '')
-call Dohi('SLFileFormat', s:fffg, s:ffbg, 'bold')
-call Dohi('SLBranch', s:bfg, s:bbg, 'bold')
-call Dohi('SLDiagnostic', s:dfg, s:dbg, '')
+call Dohi('SLFile', s:old_white, s:sumiInk0, '')
+call Dohi('SLFileFormat', s:spring_violet1, s:sumiInk0, 'bold')
+call Dohi('SLBranch', s:dragon_blue, s:sumiInk0, 'bold')
+call Dohi('SLDiagnostic', s:spring_green, s:winter_green, '')
 
 " To insert result of vim command into buffer
 " :put=Exec('hi Statusline')
