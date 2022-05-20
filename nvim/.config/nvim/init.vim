@@ -101,7 +101,7 @@ function! Is_coc_diagnostic_enabled ()
 endfunction
 
 function! Dohi(name, fg, bg, gui)
-  let l:string = a:name . ' guifg=' . a:fg . ' guibg=' . a:bg
+  let l:string = a:name.' guifg='.a:fg.' guibg='.a:bg
   if (a:gui != '')
     let l:string .= ' gui=' . a:gui
   endif
