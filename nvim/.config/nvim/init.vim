@@ -167,7 +167,7 @@ function! StatuslineGen(winid) abort
     let l:sl .= "%<%#SLFile#\ %f\ %m%r\ "
     let l:sl .= "%#SLBranch#%{b:git_branch}\ "
     let l:sl .= "%=%#SLFileFormat#%{&ft}\ "
-    let l:sl .= "%{%s:diagnostics?'%#SLDiagnostic':'%#StatuslineNC#'%}\ \ "
+    let l:sl .= "%{%s:diagnostics==1?'%#SLDiagnostic':'%#StatuslineNC#'%}\ \ "
     let l:sl .= "%#SLFile#\ \ %3l/%L\ :\ %-2v\ "
   else
     let l:sl .= "%<\ %f\ %m%r"
