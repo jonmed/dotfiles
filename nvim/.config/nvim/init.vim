@@ -101,8 +101,8 @@ function! Is_coc_diagnostic_enabled ()
 endfunction
 
 function! Dohi(name, fg, bg, gui)
-  let l:string = a:name.' guifg='.a:fg.' guibg='.a:bg.(a:gui==''?'':' gui='.a:gui)
-  execute 'hi ' . l:string 
+  let l:string = a:name.' guifg='.a:fg.' guibg='.a:bg
+  execute 'hi '.l:string.(a:gui==''?'':' gui='.a:gui)
 endfunction
 
 let s:sumiInk0 = "#16161D"
