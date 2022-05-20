@@ -96,11 +96,13 @@ function! ToggleDiagnostic ()
 endfunction
 
 function! Is_coc_diagnostic_enabled ()
+  let l:string = ''
   if (s:diagnostics == 1)
-    return "%#SLDiagnostic#\ \ "
+    let l:string .= "%#SLDiagnostic#""
   else
-    return "%#StatuslineNC#\ \ "
+    let l:string .= "%#StatuslineNC#"
   endif
+  let l:string .= "\ \ "
 endfunction
 
 function! Dohi(name, fg, bg, gui)
