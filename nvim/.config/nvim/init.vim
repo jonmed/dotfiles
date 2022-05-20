@@ -168,7 +168,7 @@ EOF
 function! StatuslineGen(winid) abort
   let l:sl = ''
   if (a:winid == win_getid())
-    let l:sl .= "%<%#SLFile#\ \ %f\ %m%r\ "
+    let l:sl .= "%<%#SLFile#\ %f\ %m%r\ "
     let l:sl .= "%{%&ft==''?'':'%#SLFileFormat#\ '..&ft..'\ '%}"
     let l:sl .= "%{%b:git_branch==''?'':'%#SLBranch#\ '..b:git_branch..'\ '%}"
     let l:sl .= "%{%Is_coc_diagnostic_enabled()%}%#Statusline#"
