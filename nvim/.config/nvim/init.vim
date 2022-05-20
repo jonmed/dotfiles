@@ -88,7 +88,7 @@ let s:diagnostics = 1
 
 function! ToggleDiagnostic ()
   call CocAction('diagnosticToggle')
-  s:diagnostics = s:diagnostics==1 ? 0 : 1
+  s:diagnostics = (s:diagnostics==1 ? 0 : 1)
 endfunction
 
 function! Is_coc_diagnostic_enabled ()
