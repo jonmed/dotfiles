@@ -102,6 +102,8 @@ endfunction
 
 function! Dohi(name, fg, bg, gui)
   let l:string = a:name.' guifg='.a:fg.' guibg='.a:bg
+  let l:string .= a:fg==''?'':' guifg='.a:fg
+  let l:string .= a:bg==''?'':' guibg='.a:bg
   execute 'hi '.l:string.(a:gui==''?'':' gui='.a:gui)
 endfunction
 
@@ -110,12 +112,10 @@ let s:old_white = "#C8C093"
 let s:spring_green = "#98BB6C"
 let s:winter_green = "#2B3328"
 let s:dragon_blue = "#658594"
-let s:dfg = s:spring_green
-let s:dbg = s:winter_green
 
-call Dohi('SLFile', s:old_white, s:sumiInk0, '')
-call Dohi('SLFileFormat', s:spring_violet1, s:sumiInk0, 'bold')
-call Dohi('SLBranch', s:dragon_blue, s:sumiInk0, 'bold')
+call Dohi('SLFile', s:old_white, '', '')
+call Dohi('SLFileFormat', s:spring_violet1, '', 'bold')
+call Dohi('SLBranch', s:dragon_blue, '', 'bold')
 call Dohi('SLDiagnostic', s:spring_green, s:winter_green, '')
 
 " To insert result of vim command into buffer
