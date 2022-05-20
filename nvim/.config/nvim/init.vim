@@ -105,6 +105,7 @@ let s:old_white = "#C8C093"
 let s:spring_green = "#98BB6C"
 let s:winter_green = "#2B3328"
 let s:dragon_blue = "#658594"
+let s:spring_violet1 = "#938AA9"
 
 call Dohi('SLFile', s:old_white, s:sumiInk0, '')
 call Dohi('SLFileFormat', s:spring_violet1, s:sumiInk0, 'bold')
