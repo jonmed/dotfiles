@@ -97,8 +97,8 @@ endfunction
 
 function! Is_coc_diagnostic_enabled ()
   let l:string = ''
-  if (s:diagnostics == 1)
-    let l:string .= "%#SLDiagnostic#""
+  if (s:diagnostics)
+    let l:string .= s:diagnostics==1?"%#SLDiagnostic#":"%#StatuslineNC#"
   else
     let l:string .= "%#StatuslineNC#"
   endif
