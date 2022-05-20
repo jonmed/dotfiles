@@ -112,22 +112,10 @@ function! Dohi(name, fg, bg, gui)
 endfunction
 
 let s:sumiInk0 = "#16161D"
-let s:sumiInk1 = "#1F1F28"
-let s:sumiInk2 = "#2A2A37"
-let s:sumiInk3 = "#363646"
 let s:old_white = "#C8C093"
 let s:spring_green = "#98BB6C"
 let s:winter_green = "#2B3328"
 let s:dragon_blue = "#658594"
-let s:wave_blue1 = "#223249"
-let s:wave_blue2 = "#2D4F67"
-let s:winter_blue = "#252535"
-let s:crystal_blue = "#7E9CD8"
-let s:spring_violet1 = "#938AA9"
-let s:fuji_gray = "#727169"
-let s:oni_violet = "#957FB8"
-let s:autumn_yellow = "#DCA561"
-let s:black = s:sumiInk0 
 let s:ffg = s:old_white
 let s:fbg = s:sumiInk0
 let s:fffg = s:spring_violet1
