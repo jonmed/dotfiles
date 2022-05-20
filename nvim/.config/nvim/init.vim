@@ -17,7 +17,6 @@ Plug 'nvim-telescope/telescope-fzf-native.nvim', {'do': 'make'}
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-Plug 'nvim-neorg/neorg'
 Plug 'vimwiki/vimwiki', {'branch': 'dev'}
 Plug 'camspiers/animate.vim'
 Plug 'camspiers/lens.vim'
@@ -226,16 +225,6 @@ nnoremap <leader>ff <cmd>Telescope find_files theme=ivy<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep theme=ivy<cr>
 nnoremap <leader>fb <cmd>Telescope buffers theme=ivy<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags theme=ivy<cr>
-
-" neorg
-lua << EOF
-require('neorg').setup {
-  load = {
-    ["core.defaults"] = {},
-    ["core.norg.concealer"] = {}
-  }
-}
-EOF
 
 " lens
 let g:lens#disabled = 1
