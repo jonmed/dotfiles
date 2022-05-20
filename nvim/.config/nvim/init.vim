@@ -167,7 +167,7 @@ function! StatuslineGen(winid) abort
     let l:sl .= "%<%#SLFile#\ %f\ %m%r\ "
     let l:sl .= "%{%b:git_branch==''?'':'%#SLBranch#\ '..b:git_branch..'\ '%}"
     "let l:sl .= "%=%{%&ft==''?'':'%#SLFileFormat#\ '..&ft..'\ '%}"
-    let l:sl .= "%=%#SLFileFormat#%y"
+    let l:sl .= "%=%#SLFileFormat#%Y\ "
     let l:sl .= "%{%Is_coc_diagnostic_enabled()%}%#Statusline#"
     let l:sl .= "%#SLFile#\ \ %3l/%L\ :\ %-2v\ "
   else
