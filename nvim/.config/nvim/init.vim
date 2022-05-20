@@ -300,7 +300,7 @@ augroup END
 
 augroup get_git_branch 
   autocmd!
-  autocmd BufEnter * let b:git_branch = GitBranch() 
+  autocmd BufEnter,WinEnter * let b:git_branch = GitBranch() 
 augroup END
 
 augroup python 
@@ -312,4 +312,3 @@ augroup markdown
   au!
   au FileType markdown setlocal conceallevel=2
 augroup END
-
