@@ -103,6 +103,7 @@ function! Is_coc_diagnostic_enabled ()
     let l:string .= "%#StatuslineNC#"
   endif
   let l:string .= "\ \ "
+  return l:string
 endfunction
 
 function! Dohi(name, fg, bg, gui)
