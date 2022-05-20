@@ -111,7 +111,7 @@ let s:spring_green = "#98BB6C"
 let s:winter_green = "#2B3328"
 let s:dragon_blue = "#658594"
 
-call Dohi('SLFile', s:old_white, s:sumiInk0, '')
+call Dohi('SLFile', s:old_white, s:sumiInk0, 'bold')
 call Dohi('SLFileFormat', s:spring_violet1, s:sumiInk0, 'bold')
 call Dohi('SLBranch', s:dragon_blue, s:sumiInk0, 'bold')
 call Dohi('SLDiagnostic', s:spring_green, s:winter_green, '')
