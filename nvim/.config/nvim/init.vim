@@ -13,9 +13,8 @@ Plug 'kyazdani42/nvim-web-devicons'
 Plug 'kyazdani42/nvim-tree.lua'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'iamcco/markdown-preview.nvim', {
-  'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']
-}
-Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
+  'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
+Plug 'nvim-telescope/telescope-fzf-native.nvim', {'do': 'make'}
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
