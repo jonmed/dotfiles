@@ -134,7 +134,8 @@ let b:git_branch = ''
 function! StatuslineGen(winid) abort
   let l:sl = ''
   if (a:winid == win_getid())
-    let l:sl .= "%<%#SLFile#\ %{expand('%:~:.')}\ %m%r\ "
+    let l:sl .= "%<%#SLFile#\ %{expand('%')!=''?expand('%:~:.'):'[No\ Name]'}"
+    let l:sl .= "\ %m%r\ "
     let l:sl .= "%#SLBranch#%{b:git_branch}\ "
     let l:sl .= "%=%#SLFileFormat#%{&ft}\ "
     let l:sl .= "%{%Is_coc_diagnostic_enabled()%}"
