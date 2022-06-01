@@ -125,7 +125,7 @@ function! GitBranch()
   let l:file_path = fnamemodify(resolve(expand("%:p")), ':h')
   let l:repo = trim(system("basename -s .git `git -C ".l:file_path." remote get-url origin 2>/dev/null` 2>/dev/null"))
   if (l:repo = '')
-    return ''
+    return '%#StatuslineNC#'
   endif
   let l:branch = trim(system("git -C ".l:file_path." branch --show-current 2>/dev/null"))
   return '' . l:repo . ":" . l:branch
