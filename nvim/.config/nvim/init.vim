@@ -124,7 +124,7 @@ endfunction
 function! GitBranch()
   let l:repo = trim(system("basename -s .git `git remote get-url origin 2>/dev/null` 2>/dev/null"))
   let l:temp = expand("%:p")
-  let l:branch = trim(system("git -C ".resolve(expand("l:temp:h"))." branch --show-current 2>/dev/null"))
+  let l:branch = trim(system("git -C ".resolve(expand(l:temp..":h"))." branch --show-current 2>/dev/null"))
   return '' . l:repo . ":" . l:branch
 endfunction
 
