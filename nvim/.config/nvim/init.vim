@@ -122,10 +122,9 @@ function! Exec(command)
 endfunction
 
 function! GitBranch()
-  let l:repo = trim(system("basename -s .git `git remote get-url origin 2>/dev/null` 2>/dev/null"))
-  let l:repopath = fnamemodify(resolve(expand("%:p")), ':h')
-  let l:repo = trim(system("basename -s .git `git -C ".l:repopath." remote get-url origin 2>/dev/null` 2>/dev/null"))
-  let l:branch = trim(system("git -C ".l:repopath." branch --show-current 2>/dev/null"))
+  let l:file_path = fnamemodify(resolve(expand("%:p")), ':h')
+  let l:repo = trim(system("basename -s .git `git -C ".l:file_path." remote get-url origin 2>/dev/null` 2>/dev/null"))
+  let l:branch = trim(system("git -C ".l:file_path." branch --show-current 2>/dev/null"))
   return '' . l:repo . ":" . l:branch
 endfunction
 
