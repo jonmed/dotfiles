@@ -124,7 +124,7 @@ endfunction
 function! GitBranch()
   let l:repo = trim(system("basename -s .git `git remote get-url origin 2>/dev/null` 2>/dev/null"))
   let l:branch = trim(system("git -C ".expand("%:h")." branch --show-current 2>/dev/null"))
-  return l:repo . ":" . l:branch
+  return '' . l:repo . ":" . l:branch
 endfunction
 
 function! DisableSL()
@@ -138,7 +138,7 @@ function! StatuslineGen(winid) abort
   if (a:winid == win_getid())
     let l:sl .= "%<%#SLFile#\ %{expand('%')!=''?expand('%:~:.'):'[No\ Name]'}"
     let l:sl .= "\ %m%r\ "
-    let l:sl .= "%#SLBranch#%{b:git_branch}\ "
+    let l:sl .= "%#SLBranch#%{b:git_branch}\ "
     let l:sl .= "%=%#SLFileFormat#%{&ft}\ "
     let l:sl .= "%{%Is_coc_diagnostic_enabled()%}"
     let l:sl .= "%#SLFile#\ \ %3l/%L\ :\ %-2v\ "
