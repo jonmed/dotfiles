@@ -232,7 +232,8 @@ require('telescope').load_extension('fzf')
 require('telescope').load_extension('live_grep_args')
 END
 nnoremap <leader>ff <cmd>Telescope find_files theme=ivy<cr>
-nnoremap <leader>fg <cmd>Telescope live_grep theme=ivy<cr>
+#nnoremap <leader>fg <cmd>Telescope live_grep theme=ivy<cr>
+nnoremap <leader>fg :lua require("telescope").extensions.live_grep_args.live_grep_args()<cr>
 nnoremap <leader>fb <cmd>Telescope buffers theme=ivy<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags theme=ivy<cr>
 
