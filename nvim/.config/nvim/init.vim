@@ -16,6 +16,7 @@ Plug 'iamcco/markdown-preview.nvim', {'do': {-> mkdp#util#install()}, 'for': ['m
 Plug 'nvim-telescope/telescope-fzf-native.nvim', {'do': 'make'}
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
+Plug 'nvim-telescope/telescope-live-grep-args.nvim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'vimwiki/vimwiki', {'branch': 'dev'}
 Plug 'camspiers/animate.vim'
@@ -228,6 +229,7 @@ END
 " Telescope
 lua << END
 require('telescope').load_extension('fzf')
+require('telescope').load_extension('live_grep_args')
 END
 nnoremap <leader>ff <cmd>Telescope find_files theme=ivy<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep theme=ivy<cr>
