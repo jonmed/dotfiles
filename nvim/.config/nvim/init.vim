@@ -22,6 +22,7 @@ Plug 'vimwiki/vimwiki', {'branch': 'dev'}
 Plug 'camspiers/animate.vim'
 Plug 'camspiers/lens.vim'
 Plug 'mfussenegger/nvim-dap'
+Plug 'mfussenegger/nvim-dap-python'
 call plug#end()
 
 " Speed up startup
