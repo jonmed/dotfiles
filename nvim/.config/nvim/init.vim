@@ -273,7 +273,6 @@ require('dapui').setup({
       size = 0.25,
       position = "bottom",
     },
-
   },
   floating = {
     max_height = nil, -- These can be integers or a float between 0 and 1.
