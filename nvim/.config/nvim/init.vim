@@ -238,6 +238,9 @@ nnoremap <leader>fG :lua require("telescope").extensions.live_grep_args.live_gre
 nnoremap <leader>fb <cmd>Telescope buffers theme=ivy<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags theme=ivy<cr>
 
+" DAP
+lua require('dap-python').setup('~/.virtualenvs/debugpy/bin/python')
+
 " lens
 let g:lens#disabled = 1
 nnoremap <silent> <leader>l :call lens#toggle()<cr>
