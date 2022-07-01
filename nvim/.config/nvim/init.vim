@@ -21,6 +21,7 @@ Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'vimwiki/vimwiki', {'branch': 'dev'}
 Plug 'camspiers/animate.vim'
 Plug 'camspiers/lens.vim'
+Plug 'mfussenegger/nvim-dap'
 call plug#end()
 
 " Speed up startup
