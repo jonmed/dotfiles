@@ -254,6 +254,13 @@ lua require('dapui').setup({
       },
       size = 40,
       position = "right",
+    {
+      elements = {
+        "console",
+      },
+      size = 0.25,
+      position = "bottom",
+    },
   },
 })
 lua require('nvim-dap-virtual-text').setup()
