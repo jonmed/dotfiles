@@ -240,7 +240,6 @@ nnoremap <leader>fg <cmd>Telescope live_grep theme=ivy<cr>
 nnoremap <leader>fG :lua require("telescope").extensions.live_grep_args.live_grep_args({ theme = {'ivy'} })<cr>
 nnoremap <leader>fb <cmd>Telescope buffers theme=ivy<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags theme=ivy<cr>
-nnoremap <leader>fd <cmd>Telescope dap frames theme=ivy<cr>
 
 " DAP
 lua require('dap-python').setup('~/.virtualenvs/debugpy/bin/python')
@@ -258,6 +257,8 @@ nnoremap <silent> <F23> :lua require'dap'.step_out()<cr>
 nnoremap <silent> <leader>dr :lua require'dap'.repl.toggle({}, 'vsplit')<cr><c-w>l
 nnoremap <silent> <leader>dk :lua require'dap'.up()<cr>
 nnoremap <silent> <leader>dj :lua require'dap'.down()<cr>
+nnoremap <leader>df <cmd>Telescope dap frames theme=ivy<cr>
+nnoremap <leader>db <cmd>Telescope dap frames theme=ivy<cr>
 
 
 " lens
