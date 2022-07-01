@@ -241,8 +241,10 @@ nnoremap <leader>fh <cmd>Telescope help_tags theme=ivy<cr>
 
 " DAP
 lua require('dap-python').setup('~/.virtualenvs/debugpy/bin/python')
+nnoremap <F5> :lua require'dap'.continue()<cr>
 nnoremap <F9> :lua require'dap'.toggle_breakpoint()<cr>
-nnoremap <leader>d :lua require'dap'.toggle_breakpoint()<cr>
+nnoremap <F10> :lua require'dap'.continue()<cr>
+nnoremap <F11> :lua require'dap'.continue()<cr>
 
 " lens
 let g:lens#disabled = 1
