@@ -258,7 +258,7 @@ nnoremap <silent> <leader>dr :lua require'dap'.repl.toggle({}, 'vsplit')<cr><c-w
 nnoremap <silent> <leader>dk :lua require'dap'.up()<cr>
 nnoremap <silent> <leader>dj :lua require'dap'.down()<cr>
 nnoremap <leader>df <cmd>Telescope dap frames theme=ivy<cr>
-nnoremap <leader>db <cmd>Telescope dap frames theme=ivy<cr>
+nnoremap <leader>db <cmd>Telescope dap list_breakpoints theme=ivy<cr>
 
 
 " lens
