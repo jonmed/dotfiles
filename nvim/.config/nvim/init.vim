@@ -246,7 +246,7 @@ nnoremap <silent> <F5> :lua require'dap'.continue()<cr>
 nnoremap <silent> <F17> :lua require'dap'.terminate()<cr>
 nnoremap <silent> <F9> :lua require'dap'.toggle_breakpoint()<cr>
 " <F21> == <S-F9>
-nnoremap <silent> <F21> :lua require'dap'.list_breakpoints()<cr>
+nnoremap <silent> <F21> :lua require'dap'.clear_breakpoints()<cr>
 
 nnoremap <silent> <F10> :lua require'dap'.step_over()<cr>
 nnoremap <silent> <F11> :lua require'dap'.step_into()<cr>
