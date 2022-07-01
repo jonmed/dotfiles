@@ -24,6 +24,7 @@ Plug 'camspiers/lens.vim'
 Plug 'mfussenegger/nvim-dap'
 Plug 'mfussenegger/nvim-dap-python'
 Plug 'nvim-telescope/telescope-dap.nvim'
+Plug 'theHamsta/nvim-dap-virtual-text'
 call plug#end()
 
 " Speed up startup
