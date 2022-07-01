@@ -263,6 +263,7 @@ nnoremap <silent> <leader>dk :lua require'dap'.up()<cr>
 nnoremap <silent> <leader>dj :lua require'dap'.down()<cr>
 nnoremap <leader>df <cmd>Telescope dap frames theme=ivy<cr>
 nnoremap <leader>db <cmd>Telescope dap list_breakpoints theme=ivy<cr>
+nnoremap <silent> <leader>dq :lua require('dapui').toggle()<cr>
 
 
 
