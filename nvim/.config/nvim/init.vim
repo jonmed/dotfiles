@@ -242,6 +242,8 @@ nnoremap <leader>fh <cmd>Telescope help_tags theme=ivy<cr>
 " DAP
 lua require('dap-python').setup('~/.virtualenvs/debugpy/bin/python')
 nnoremap <F5> :lua require'dap'.continue()<cr>
+" <F17> == <S-F5>
+nnoremap <F17> :lua require'dap'.stop()<cr>
 nnoremap <F9> :lua require'dap'.toggle_breakpoint()<cr>
 nnoremap <F10> :lua require'dap'.step_over()<cr>
 nnoremap <F11> :lua require'dap'.step_into()<cr>
