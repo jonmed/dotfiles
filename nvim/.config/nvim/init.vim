@@ -253,6 +253,7 @@ nnoremap <silent> <F11> :lua require'dap'.step_into()<cr>
 " <F23> == <S-F11>
 nnoremap <silent> <F23> :lua require'dap'.step_out()<cr>
 nnoremap <silent> <leader>dr :lua require'dap'.repl.open({}, 'vsplit')<cr><c-w>l
+nnoremap <silent> <leader>di :lua require'dap.ui.widgets'.hover()<cr>
 
 
 " lens
