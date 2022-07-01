@@ -246,7 +246,7 @@ nnoremap <leader>fh <cmd>Telescope help_tags theme=ivy<cr>
 " DAP
 lua require('dap-python').setup('~/.virtualenvs/debugpy/bin/python')
 lua << END
-require('dapui').setup {
+require('dapui').setup({
   icons = { expanded = "▾", collapsed = "▸" },
   mappings = {
     expand = { "<CR>", "<2-LeftMouse>" },
@@ -265,6 +265,7 @@ require('dapui').setup {
       },
       size = 40,
       position = "right",
+    },
     {
       elements = {
         "console",
@@ -272,6 +273,7 @@ require('dapui').setup {
       size = 0.25,
       position = "bottom",
     },
+
   },
   floating = {
     max_height = nil, -- These can be integers or a float between 0 and 1.
@@ -285,7 +287,7 @@ require('dapui').setup {
   render = {
     max_type_length = nil, -- Can be integer or nil.
   }
-}
+})
 END
 lua require('nvim-dap-virtual-text').setup()
 nnoremap <silent> <F5> :lua require'dap'.continue()<cr>
