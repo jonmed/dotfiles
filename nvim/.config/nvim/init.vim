@@ -252,7 +252,7 @@ nnoremap <silent> <F10> :lua require'dap'.step_over()<cr>
 nnoremap <silent> <F11> :lua require'dap'.step_into()<cr>
 " <F23> == <S-F11>
 nnoremap <silent> <F23> :lua require'dap'.step_out()<cr>
-nnoremap <silent> <c-a-i> :lua require'dap'.repl.open({}, 'vsplit')<cr><c-w>l
+nnoremap <silent> <leader>di :lua require'dap'.repl.open({}, 'vsplit')<cr><c-w>l
 
 
 " lens
