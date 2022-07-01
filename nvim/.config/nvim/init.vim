@@ -245,10 +245,13 @@ nnoremap <silent> <F5> :lua require'dap'.continue()<cr>
 " <F17> == <S-F5>
 nnoremap <silent> <F17> :lua require'dap'.terminate()<cr>
 nnoremap <silent> <F9> :lua require'dap'.toggle_breakpoint()<cr>
+nnoremap <silent> <F21> :lua require'dap'.clear_breakpoints()<cr>
+
 nnoremap <silent> <F10> :lua require'dap'.step_over()<cr>
 nnoremap <silent> <F11> :lua require'dap'.step_into()<cr>
 " <F23> == <S-F11>
 nnoremap <silent> <F23> :lua require'dap'.step_out()<cr>
+nnoremap <silent> <> :lua require'dap'.step_out()<cr>
 
 " lens
 let g:lens#disabled = 1
