@@ -244,6 +244,7 @@ nnoremap <leader>fh <cmd>Telescope help_tags theme=ivy<cr>
 
 " DAP
 lua require('dap-python').setup('~/.virtualenvs/debugpy/bin/python')
+lua require('nvim-dap-virtual-text').setup()
 nnoremap <silent> <F5> :lua require'dap'.continue()<cr>
 " <F17> == <S-F5>
 nnoremap <silent> <F17> :lua require'dap'.terminate()<cr>
@@ -261,7 +262,6 @@ nnoremap <silent> <leader>dj :lua require'dap'.down()<cr>
 nnoremap <leader>df <cmd>Telescope dap frames theme=ivy<cr>
 nnoremap <leader>db <cmd>Telescope dap list_breakpoints theme=ivy<cr>
 
-let g:dap_virtual_text = v:true
 
 
 " lens
