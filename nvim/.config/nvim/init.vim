@@ -261,6 +261,8 @@ nnoremap <silent> <leader>dj :lua require'dap'.down()<cr>
 nnoremap <leader>df <cmd>Telescope dap frames theme=ivy<cr>
 nnoremap <leader>db <cmd>Telescope dap list_breakpoints theme=ivy<cr>
 
+let g:dap_virtual_text = v:true
+
 
 " lens
 let g:lens#disabled = 1
