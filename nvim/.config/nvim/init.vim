@@ -245,6 +245,7 @@ nnoremap <F5> :lua require'dap'.continue()<cr>
 nnoremap <F9> :lua require'dap'.toggle_breakpoint()<cr>
 nnoremap <F10> :lua require'dap'.step_over()<cr>
 nnoremap <F11> :lua require'dap'.step_into()<cr>
+set <S-F11>=^[[23;2
 nnoremap <S-F11> :lua require'dap'.step_out()<cr>
 
 " lens
