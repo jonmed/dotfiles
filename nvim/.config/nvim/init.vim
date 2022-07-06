@@ -157,15 +157,6 @@ endfunction
 set statusline=%!StatuslineGen(g:statusline_winid)
 
 " File Explorer
-lua << END
-require('nvim-tree').setup {
-  renderer = {
-    icons = {
-      webdev_colors = true 
-    }
-  }
-}
-END
 nnoremap <silent> <leader>e :NvimTreeToggle<CR>
 
 " markdown-preview
