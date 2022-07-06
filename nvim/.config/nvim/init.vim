@@ -258,11 +258,9 @@ dap.listeners.before.event_exited['dapui_config'] = function()
 end
 EOF
 nnoremap <silent> <F5> :lua require'dap'.continue()<cr>
-" <F17> == <S-F5>
-nnoremap <silent> <F17> :lua require'dap'.terminate()<cr>
+nnoremap <silent> <S-F5> :lua require'dap'.terminate()<cr>
 nnoremap <silent> <F9> :lua require'dap'.toggle_breakpoint()<cr>
-" <F21> == <S-F9>
-nnoremap <silent> <F21> :lua require'dap'.clear_breakpoints()<cr>
+nnoremap <silent> <S-F9> :lua require'dap'.clear_breakpoints()<cr>
 
 nnoremap <silent> <F10> :lua require'dap'.step_over()<cr>
 nnoremap <silent> <F11> :lua require'dap'.step_into()<cr>
