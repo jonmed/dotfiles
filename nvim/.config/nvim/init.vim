@@ -258,22 +258,7 @@ dap.listeners.before.event_exited['dapui_config'] = function()
   dapui.close()
 end
 EOF
-function! StartDebug()
-  call system('docker-compose up')
-lua << EOF
-  local dap = require'dap'
-  dap.run({
-    type = 'python',
-    request = 'attach',
-    address = '127.0.0.1',
-    port = 5678,
-    localRoot = vim.fn.getcwd(),
-    remoteRoot = "/app",
-  })
-EOF
-endfunction
-"nnoremap <silent> <F5> :lua require'dap'.continue()<cr>
-nnoremap <silent> <F5> call StartDebug()<cr>
+nnoremap <silent> <F5> :lua require'dap'.continue()<cr>
 nnoremap <silent> <S-F5> :lua require'dap'.terminate()<cr>
 nnoremap <silent> <F9> :lua require'dap'.toggle_breakpoint()<cr>
 nnoremap <silent> <S-F9> :lua require'dap'.clear_breakpoints()<cr>
