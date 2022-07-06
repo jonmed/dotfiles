@@ -161,7 +161,7 @@ lua << END
 require('nvim-tree').setup {
   renderer = {
     icons = {
-      webdev_colors = false 
+      webdev_colors = true 
     }
   }
 }
