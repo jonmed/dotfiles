@@ -258,6 +258,10 @@ dap.listeners.before.event_exited['dapui_config'] = function()
   dapui.close()
 end
 EOF
+function! StartDebug()
+  system('docker-compose up')
+endfunction
+"nnoremap <silent> <F5> :lua require'dap'.continue()<cr>
 nnoremap <silent> <F5> :lua require'dap'.continue()<cr>
 nnoremap <silent> <S-F5> :lua require'dap'.terminate()<cr>
 nnoremap <silent> <F9> :lua require'dap'.toggle_breakpoint()<cr>
