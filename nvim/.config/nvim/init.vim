@@ -260,6 +260,7 @@ end
 EOF
 function! StartDebug()
   call system('docker-compose up')
+  lua require'dap'.run()
 endfunction
 "nnoremap <silent> <F5> :lua require'dap'.continue()<cr>
 nnoremap <silent> <F5> call StartDebug()<cr>
