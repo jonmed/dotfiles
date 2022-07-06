@@ -246,6 +246,17 @@ table.insert(require('dap').configurations.python, {
     remoteRoot = ".";
   }};
 })
+table.insert(require('dap').configurations.python, {
+  name = 'Docker remote launch',
+  type = 'python',
+  request = 'launch',
+  port = 5678,
+  host = 'localhost',
+  pathMappings = {{
+    localRoot = vim.fn.getcwd();
+    remoteRoot = ".";
+  }};
+})
 require('dapui').setup()
 local dap, dapui = require('dap'), require('dapui')
 dap.listeners.after.event_initialized['dapui_config'] = function()
