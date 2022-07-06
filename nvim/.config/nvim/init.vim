@@ -49,6 +49,8 @@ endif
 " Colors
 set termguicolors
 colorscheme kanagawa
+hi! VertSplit guifg=#363646 guibg=#1F1F28
+hi! Visual gui=reverse
 
 " Files
 set noswapfile
@@ -81,9 +83,6 @@ set wildignorecase
 
 " System
 set clipboard+=unnamed,unnamedplus
-
-hi! VertSplit guifg=#363646 guibg=#1F1F28
-hi! Visual gui=reverse
 
 " Statusline
 let s:diagnostics = 1
