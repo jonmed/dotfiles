@@ -251,7 +251,7 @@ table.insert(require('dap').configurations.python, {
   type = 'python',
   request = 'attach',
   port = 5678,
-  host: 'localhost',
+  host = 'localhost',
   pathMappings = {{
     localRoot = vim.fn.getcwd();
     remoteRoot = "/";
