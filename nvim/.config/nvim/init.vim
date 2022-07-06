@@ -260,7 +260,17 @@ end
 EOF
 function! StartDebug()
   call system('docker-compose up')
-  lua require'dap'.run()
+lua << EOF
+  local dap = require'dap'
+  dap.run({
+    type = 'python',
+    request = 'attach',
+    address = '127.0.0.1',
+    port = 5678,
+    localRoot = vim.fn.getcwd(),
+    remoteRoot = "/app",
+  })
+EOF
 endfunction
 "nnoremap <silent> <F5> :lua require'dap'.continue()<cr>
 nnoremap <silent> <F5> call StartDebug()<cr>
