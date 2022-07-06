@@ -157,6 +157,7 @@ endfunction
 set statusline=%!StatuslineGen(g:statusline_winid)
 
 " File Explorer
+lua require('nvim-tree').setup()
 nnoremap <silent> <leader>e :NvimTreeToggle<CR>
 
 " markdown-preview
