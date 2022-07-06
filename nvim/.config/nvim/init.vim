@@ -261,11 +261,9 @@ nnoremap <silent> <F5> :lua require'dap'.continue()<cr>
 nnoremap <silent> <S-F5> :lua require'dap'.terminate()<cr>
 nnoremap <silent> <F9> :lua require'dap'.toggle_breakpoint()<cr>
 nnoremap <silent> <S-F9> :lua require'dap'.clear_breakpoints()<cr>
-
 nnoremap <silent> <F10> :lua require'dap'.step_over()<cr>
 nnoremap <silent> <F11> :lua require'dap'.step_into()<cr>
-" <F23> == <S-F11>
-nnoremap <silent> <F23> :lua require'dap'.step_out()<cr>
+nnoremap <silent> <S-F11> :lua require'dap'.step_out()<cr>
 nnoremap <silent> <leader>dr :lua require'dap'.repl.toggle({}, 'vsplit')<cr><c-w>l
 nnoremap <silent> <leader>dk :lua require'dap'.up()<cr>
 nnoremap <silent> <leader>dj :lua require'dap'.down()<cr>
