@@ -256,7 +256,6 @@ table.insert(require('dap').configurations.python, {
     localRoot = vim.fn.getcwd();
     remoteRoot = "/";
   }};
-  program = '${file}',
 })
 EOF
 lua << END
