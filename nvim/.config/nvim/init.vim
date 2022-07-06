@@ -261,7 +261,7 @@ require('dapui').setup({
       elements = {
         "repl",
       },
-      size = 0.25, -- 25% of total lines
+      size = 0.15, -- 25% of total lines
       position = "bottom",
     },
   },
