@@ -257,12 +257,11 @@ require('dapui').setup({
         "watches",
       },
       size = 40, -- 40 columns
-      position = "left",
+      position = "right",
     },
     {
       elements = {
         "repl",
-        "console",
       },
       size = 0.25, -- 25% of total lines
       position = "bottom",
