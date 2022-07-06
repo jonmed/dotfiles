@@ -233,6 +233,7 @@ nnoremap <leader>fh <cmd>Telescope help_tags theme=ivy<cr>
 " DAP
 lua << EOF
 require('dap-python').setup('~/.virtualenvs/debugpy/bin/python')
+require('nvim-dap-virtual-text').setup()
 table.insert(require('dap').configurations.python, {
   name = 'Docker remote attach',
   type = 'python',
@@ -256,7 +257,16 @@ require('dapui').setup({
     },
   },
 })
-require('nvim-dap-virtual-text').setup()
+local dap, dapui = require('dap'), require('dapui')
+dap.listeners.after.event_initialized['dapui_config'] = function()
+  dapui.open()
+end
+dap.listeners.before.event_initialized['dapui_config'] = function()
+  dapui.close()
+end
+dap.listeners.before.event_initialized['dapui_config'] = function()
+  dapui.close()
+end
 EOF
 nnoremap <silent> <F5> :lua require'dap'.continue()<cr>
 " <F17> == <S-F5>
