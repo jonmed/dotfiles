@@ -245,18 +245,7 @@ table.insert(require('dap').configurations.python, {
     remoteRoot = ".";
   }};
 })
-require('dapui').setup({
-  layouts = {
-    {
-      elements = {
-        "scopes",
-        "watches",
-      },
-      size = 40,
-      position = "right",
-    },
-  },
-})
+require('dapui').setup()
 local dap, dapui = require('dap'), require('dapui')
 dap.listeners.after.event_initialized['dapui_config'] = function()
   dapui.open()
