@@ -254,7 +254,7 @@ table.insert(require('dap').configurations.python, {
   host = 'localhost',
   pathMappings = {{
     localRoot = vim.fn.getcwd();
-    remoteRoot = "/var/opt/suap/";
+    remoteRoot = ".";
   }};
 })
 EOF
