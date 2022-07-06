@@ -244,8 +244,8 @@ nnoremap <leader>fb <cmd>Telescope buffers theme=ivy<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags theme=ivy<cr>
 
 " DAP
-lua require('dap-python').setup('~/.virtualenvs/debugpy/bin/python')
 lua << EOF
+require('dap-python').setup('~/.virtualenvs/debugpy/bin/python')
 table.insert(require('dap').configurations.python, {
   name = 'Docker remote attach',
   type = 'python',
@@ -257,8 +257,6 @@ table.insert(require('dap').configurations.python, {
     remoteRoot = ".";
   }};
 })
-EOF
-lua << END
 require('dapui').setup({
   layouts = {
     {
@@ -271,8 +269,8 @@ require('dapui').setup({
     },
   },
 })
+require('nvim-dap-virtual-text').setup()
 END
-lua require('nvim-dap-virtual-text').setup()
 nnoremap <silent> <F5> :lua require'dap'.continue()<cr>
 " <F17> == <S-F5>
 nnoremap <silent> <F17> :lua require'dap'.terminate()<cr>
