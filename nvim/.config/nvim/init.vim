@@ -245,6 +245,20 @@ nnoremap <leader>fh <cmd>Telescope help_tags theme=ivy<cr>
 
 " DAP
 lua require('dap-python').setup('~/.virtualenvs/debugpy/bin/python')
+lua << EOF
+table.insert(require('dap').configurations.python, {
+  name = 'Docker remote attach',
+  type = 'python',
+  request = 'attach',
+  port = 5678,
+  host: 'localhost',
+  pathMappings = {{
+    localRoot = vim.fn.getcwd();
+    remoteRoot = "/";
+  }};
+  program = '${file}',
+})
+EOF
 lua << END
 require('dapui').setup({
   layouts = {
