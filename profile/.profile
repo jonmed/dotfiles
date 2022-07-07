@@ -35,7 +35,7 @@ fi
 # Hide the mouse cursor after idle seconds
 if ! pgrep -x "unclutter" > /dev/null
 then
-    unclutter -idle 2 &
+    unclutter -idle 3 &
 fi
 
 # Go
