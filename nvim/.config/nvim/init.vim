@@ -23,6 +23,7 @@ Plug 'mfussenegger/nvim-dap-python'
 Plug 'nvim-telescope/telescope-dap.nvim'
 Plug 'theHamsta/nvim-dap-virtual-text'
 Plug 'rcarriga/nvim-dap-ui'
+Plug 'mattn/emmet-vim'
 call plug#end()
 
 " Speed up startup
