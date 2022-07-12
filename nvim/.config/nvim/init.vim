@@ -72,7 +72,6 @@ set noshowcmd
 set number
 set splitbelow
 set splitright
-set scrolloff=5
 
 " Search
 set ignorecase
