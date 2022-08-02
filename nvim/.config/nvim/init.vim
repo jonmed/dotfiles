@@ -171,14 +171,9 @@ let g:markdown_fenced_languages = ['c', 'c++', 'python', 'sh', 'json', 'css', 'h
 set updatetime=300
 set shortmess+=c
 set signcolumn=number
-inoremap <silent><expr> <c-p> 
-      \ coc#pum#visible() ? coc#pum#next(1):
-      \ coc#refresh()
-inoremap <silent><expr> <c-n> 
-      \ coc#pum#visible() ? coc#pum#prev(1):
-      \ coc#refresh()
-inoremap <silent><expr> <CR> coc#pum#visible() ? coc#_select_confirm()
-                            \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+inoremap <silent><expr> <c-n> coc#pum#visible() ? coc#pum#next(1): coc#refresh()
+inoremap <silent><expr> <c-p> coc#pum#visible() ? coc#pum#prev(1): coc#refresh()
+inoremap <silent><expr> <tab> coc#pum#visible() ? coc#_select_confirm() : "\<tab>"
 
 nmap <silent> [g <Plug>(coc-diagnostic-prev)
 nmap <silent> ]g <Plug>(coc-diagnostic-next)
