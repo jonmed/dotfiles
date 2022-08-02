@@ -173,6 +173,8 @@ set shortmess+=c
 set signcolumn=number
 inoremap <silent><expr> <c-n> coc#refresh()
 inoremap <silent><expr> <c-p> coc#refresh()
+inoremap <silent><expr> <CR> coc#pum#visible() ? coc#_select_confirm()
+                            \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
 nmap <silent> [g <Plug>(coc-diagnostic-prev)
 nmap <silent> ]g <Plug>(coc-diagnostic-next)
