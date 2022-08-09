@@ -1,5 +1,4 @@
 let mapleader = " "
-
 let g:plug_home = stdpath('data') . '/plugged'
 call plug#begin()
 Plug 'lewis6991/impatient.nvim'
@@ -167,13 +166,16 @@ let g:mkdp_auto_close = 0
 let g:vimwiki_list = [{'path': '~/notes/', 'syntax': 'markdown', 'ext': '.md'}]
 let g:markdown_fenced_languages = ['c', 'c++', 'python', 'sh', 'json', 'css', 'html']
 
+" emmet
+let g:user_emmet_install_global = 0
+autocmd FileType html,css EmmetInstall
+
 " coc settings
 set updatetime=300
 set shortmess+=c
 set signcolumn=number
 inoremap <silent><expr> <c-n> coc#pum#visible() ? coc#pum#next(1): coc#refresh()
 inoremap <silent><expr> <c-p> coc#pum#visible() ? coc#pum#prev(1): coc#refresh()
-inoremap <silent><expr> <tab> coc#pum#visible() ? coc#_select_confirm() : "\<tab>"
 
 nmap <silent> [g <Plug>(coc-diagnostic-prev)
 nmap <silent> ]g <Plug>(coc-diagnostic-next)

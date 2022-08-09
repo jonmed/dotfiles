@@ -1,5 +1,6 @@
 {
   "diagnostic.virtualText": true,
   "diagnostic.virtualTextLines": 1,
-  "diagnostic.floatConfig": {"border":true}
+  "diagnostic.floatConfig": {"border":true},
+  "suggest.noselect": true 
 }
