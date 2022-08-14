@@ -68,7 +68,6 @@ set confirm
 set guicursor+=a:blinkwait700-blinkon400-blinkoff250
 set mouse=a
 set noshowcmd
-set number
 set splitbelow
 set splitright
 
