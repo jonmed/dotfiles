@@ -74,6 +74,7 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 
 alias vim='nvim'
 alias wts='nvim /mnt/c/Users/jon/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json'
+alias penv='source venv/bin/activate'
 if [ -f ~/.bash_aliases ]; then
   . ~/.bash_aliases
 fi
