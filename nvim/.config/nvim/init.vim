@@ -23,6 +23,7 @@ Plug 'nvim-telescope/telescope-dap.nvim'
 Plug 'theHamsta/nvim-dap-virtual-text'
 Plug 'rcarriga/nvim-dap-ui'
 Plug 'mattn/emmet-vim'
+Plug 'samoshkin/vim-mergetool'
 call plug#end()
 
 " Speed up startup
