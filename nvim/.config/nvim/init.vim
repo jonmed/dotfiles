@@ -302,6 +302,7 @@ nnoremap <silent> <leader>l :call lens#toggle()<cr>
 
 " vim_mergetool
 let g:mergetool_layout = 'mr,b'
+
 function s:on_mergetool_set_layout(split)
   if a:split["layout"] ==# 'mr,b' && a:split["split"] ==# 'b'
     setlocal nodiff
@@ -309,6 +310,8 @@ function s:on_mergetool_set_layout(split)
     resize 15
   endif
 endfunction
+
+let g:MergetoolSetLayoutCallback = function('s:on_mergetool_set_layout')
 
 " General remaps
 noremap <leader>d "_d
