@@ -300,6 +300,16 @@ nnoremap <silent> <leader>d, :lua local widgets=require('dap.ui.widgets');widget
 let g:lens#disabled = 1
 nnoremap <silent> <leader>l :call lens#toggle()<cr>
 
+" vim_mergetool
+let g:mergetool_layout = 'mr,b'
+function s:on_mergetool_set_layout(split)
+  if a:split["layout"] ==# 'mr,b' && a:split["split"] ==# 'b'
+    setlocal nodiff
+    setlocal syntax=on
+    resize 15
+  endif
+endfunction
+
 " General remaps
 noremap <leader>d "_d
 nnoremap x "_x
