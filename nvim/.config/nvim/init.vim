@@ -255,6 +255,7 @@ require('dapui').setup({
     {
       elements = {
         "scopes",
+        "breakpoints",
         "stacks",
         "watches",
       },
