@@ -25,6 +25,7 @@ Plug 'rcarriga/nvim-dap-ui'
 Plug 'mattn/emmet-vim'
 Plug 'samoshkin/vim-mergetool'
 Plug 'AndrewRadev/linediff.vim'
+Plug 'nvim-treesitter/nvim-treesitter-context'
 call plug#end()
 
 " Speed up startup
