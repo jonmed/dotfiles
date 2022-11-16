@@ -14,6 +14,7 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-telescope/telescope-live-grep-args.nvim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'nvim-treesitter/nvim-treesitter-context'
 Plug 'vimwiki/vimwiki', {'branch': 'dev'}
 Plug 'camspiers/animate.vim'
 Plug 'camspiers/lens.vim'
@@ -25,7 +26,6 @@ Plug 'rcarriga/nvim-dap-ui'
 Plug 'mattn/emmet-vim'
 Plug 'samoshkin/vim-mergetool'
 Plug 'AndrewRadev/linediff.vim'
-Plug 'nvim-treesitter/nvim-treesitter-context'
 call plug#end()
 
 " Speed up startup
