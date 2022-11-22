@@ -42,7 +42,7 @@ if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
   debian_chroot=$(cat /etc/debian_chroot)
 fi
 
-PS1='\[\033[1;106;30m\]\xe0\xb6\w\[\033[0m\]\n\[\033[1;$((91+!$?))m\]>\[\033[0m\] '
+PS1=$'\\[\e[1;106;30m\\]\ue0b6\w\\[\e[0m\\]\n\\[\e[1;$((91+!$?))m\\]>\\[\e[0m\\] '
 
 PROMPT_DIRTRIM=3
 
