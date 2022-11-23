@@ -88,6 +88,10 @@ set wildignorecase
 set clipboard+=unnamed,unnamedplus
 
 " Statusline
+lua << END
+require('lualine').setup()
+END
+
 let s:diagnostics = 1
 
 function! ToggleDiagnostic ()
