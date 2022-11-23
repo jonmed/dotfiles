@@ -105,32 +105,32 @@ function! Is_coc_diagnostic_enabled ()
   return l:string . "\ \ "
 endfunction
 
-"function! Dohi(name, fg, bg, gui)
-"  let l:string = a:name.' guifg='.a:fg.' guibg='.a:bg
-"  execute 'hi '.l:string.(a:gui==''?'':' gui='.a:gui)
-"endfunction
-"
-"let s:sumiInk0 = "#16161D"
-"let s:old_white = "#C8C093"
-"let s:spring_green = "#98BB6C"
-"let s:winter_green = "#2B3328"
-"let s:dragon_blue = "#658594"
-"let s:spring_violet1 = "#938AA9"
-"
-"call Dohi('SLFile', s:old_white, s:sumiInk0, '')
-"call Dohi('SLFileFormat', s:spring_violet1, s:sumiInk0, 'bold')
-"call Dohi('SLBranch', s:dragon_blue, s:sumiInk0, 'bold')
-"call Dohi('SLDiagnostic', s:spring_green, s:winter_green, '')
-"
-"" To insert result of vim command into buffer
-"" :put=Exec('hi Statusline')
-"function! Exec(command)
-"  redir =>output
-"  silent exec a:command
-"  redir END
-"  return output
-"endfunction
-"
+function! Dohi(name, fg, bg, gui)
+  let l:string = a:name.' guifg='.a:fg.' guibg='.a:bg
+  execute 'hi '.l:string.(a:gui==''?'':' gui='.a:gui)
+endfunction
+
+let s:sumiInk0 = "#16161D"
+let s:old_white = "#C8C093"
+let s:spring_green = "#98BB6C"
+let s:winter_green = "#2B3328"
+let s:dragon_blue = "#658594"
+let s:spring_violet1 = "#938AA9"
+
+call Dohi('SLFile', s:old_white, s:sumiInk0, '')
+call Dohi('SLFileFormat', s:spring_violet1, s:sumiInk0, 'bold')
+call Dohi('SLBranch', s:dragon_blue, s:sumiInk0, 'bold')
+call Dohi('SLDiagnostic', s:spring_green, s:winter_green, '')
+
+" To insert result of vim command into buffer
+" :put=Exec('hi Statusline')
+function! Exec(command)
+  redir =>output
+  silent exec a:command
+  redir END
+  return output
+endfunction
+
 function! GitBranch()
   let l:file_path = fnamemodify(resolve(expand("%:p")), ':h')
   let l:repo = trim(system("basename -s .git `git -C ".l:file_path." remote get-url origin 2>/dev/null` 2>/dev/null"))
@@ -141,27 +141,27 @@ function! GitBranch()
   return ''.l:repo.":".l:branch
 endfunction
 
-"function! DisableSL()
-"  return "%#Normal#\ "
-"endfunction
-"
-"let b:git_branch = ''
-"
-"function! StatuslineGen(winid) abort
-"  let l:sl = ''
-"  if (a:winid == win_getid())
-"    let l:sl .= "%<%#SLFile#\ %{expand('%')!=''?expand('%:~:.'):'[No\ Name]'}"
-"    let l:sl .= "\ %m%r\ "
-"    let l:sl .= "%#SLBranch#%{%b:git_branch%}\ "
-"    let l:sl .= "%=%#SLFileFormat#%{&ft}\ "
-"    let l:sl .= "%{%Is_coc_diagnostic_enabled()%}"
-"    let l:sl .= "%#SLFile#\ \ %3l/%L\ :\ %-2v\ "
-"  else
-"    let l:sl .= "%<\ %f\ %m%r\ %{%b:git_branch%}"
-"  endif
-"  return l:sl
-"endfunction
-"
+function! DisableSL()
+  return "%#Normal#\ "
+endfunction
+
+let b:git_branch = ''
+
+function! StatuslineGen(winid) abort
+  let l:sl = ''
+  if (a:winid == win_getid())
+    let l:sl .= "%<%#SLFile#\ %{expand('%')!=''?expand('%:~:.'):'[No\ Name]'}"
+    let l:sl .= "\ %m%r\ "
+    let l:sl .= "%#SLBranch#%{%b:git_branch%}\ "
+    let l:sl .= "%=%#SLFileFormat#%{&ft}\ "
+    let l:sl .= "%{%Is_coc_diagnostic_enabled()%}"
+    let l:sl .= "%#SLFile#\ \ %3l/%L\ :\ %-2v\ "
+  else
+    let l:sl .= "%<\ %f\ %m%r\ %{%b:git_branch%}"
+  endif
+  return l:sl
+endfunction
+
 "set statusline=%!StatuslineGen(g:statusline_winid)
 
 " File Explorer
