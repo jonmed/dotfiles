@@ -121,6 +121,7 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 # See /usr/share/doc/bash-doc/examples in the bash-doc package.
 
 alias vim='nvim'
+alias nvim='nvim -u ~/nvim-new/config/init.lua'
 alias wts='nvim /mnt/c/Users/jon/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json'
 alias penv='source venv/bin/activate'
 alias suap='cd ~/suap/suap-uepb; source venv/bin/activate'
