@@ -26,6 +26,8 @@ Plug 'rcarriga/nvim-dap-ui'
 Plug 'mattn/emmet-vim'
 Plug 'samoshkin/vim-mergetool'
 Plug 'AndrewRadev/linediff.vim'
+Plug 'nvim-lualine/lualine.nvim'
+Plug 'kyazdani42/nvim-web-devicons'
 call plug#end()
 
 " Speed up startup
