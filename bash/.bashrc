@@ -67,6 +67,7 @@ function set_prompt_symbol(){
     PROMPT_SYMBOL="\$"
   else
     PROMPT_SYMBOL="${LIGHT_RED}\$${COLOR_NONE}"
+  fi
 }
 
 function set_virtualenv () {
