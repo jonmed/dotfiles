@@ -35,3 +35,14 @@ opt.wildignore:append("*/venv/*")
 
 -- System
 opt.clipboard:append("unnamedplus")
+
+opt.fillchars:append({
+    horiz = '━',
+    horizup = '┻',
+    horizdown = '┳',
+    vert = '┃',
+    vertleft = '┨',
+    vertright = '┣',
+    verthoriz = '╋',
+})
+opt.laststatus = 3
