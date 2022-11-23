@@ -43,7 +43,7 @@ if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
 fi
 
 #PS1=$'\n\e[92m\]\ue0b6\e[30;102m\]\w\e[0m\]\e[92m\]\ue0b4\e[0m\]\n\e[1;$((91+!$?))m\]\e[0m\] '
-PS1=$'\n\e[92m\]\ue0b8\e[30;102m\]\w\e[0m\]\e[92m\]\ue0b4\e[0m\]\n\e[1;$((91+!$?))m\]\e[0m\] '
+PS1=$'\n\e[92m\]\ue0ba\e[30;102m\]\w\e[0m\]\e[92m\]\ue0b4\e[0m\]\n\e[1;$((91+!$?))m\]\e[0m\] '
 
 PROMPT_DIRTRIM=3
 
