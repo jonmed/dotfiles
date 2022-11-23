@@ -57,6 +57,9 @@ function parse_git_branch(){
   git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
 
+function set_git_branch(){
+}
+
 #PS1=$'\n\e[92m\]\ue0b6\e[30;102m\]\w\e[0m\]\e[92m\]\ue0b4\e[0m\]\n\e[1;$((91+!$?))m\]\e[0m\] '
 PS1=$'\n\e[1;30;102m\] \w \e[0m\]\e[92m\]\ue0bc\e[0m\]\n\e[1;$((91+!$?))m\]\e[0m\] '
 
