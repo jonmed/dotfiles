@@ -42,9 +42,16 @@ if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
   debian_chroot=$(cat /etc/debian_chroot)
 fi
 
-   RED="\[\e[0;31m\]"
-YELLOW="\[\e[1;33m\]"
- GREEN="\[\e[0;32m\]"
+        RED="\[\e[0;31m\]"
+     YELLOW="\[\e[1;33m\]"
+      GREEN="\[\e[0;32m\]"
+       BLUE="\[\e[1;34m\]"
+     PURPLE="\[\e[0;35m\]"
+  LIGHT_RED="\[\e[1;31m\]"
+LIGHT_GREEN="\[\e[1;32m\]"
+      WHITE="\[\e[1;37m\]"
+ LIGHT_GRAY="\[\e[0;37m\]"
+ COLOR_NONE="\[\e[0m\]"
 
 #PS1=$'\n\e[92m\]\ue0b6\e[30;102m\]\w\e[0m\]\e[92m\]\ue0b4\e[0m\]\n\e[1;$((91+!$?))m\]\e[0m\] '
 PS1=$'\n\e[1;30;102m\] \w \e[0m\]\e[92m\]\ue0bc\e[0m\]\n\e[1;$((91+!$?))m\]\e[0m\] '
