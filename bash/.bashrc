@@ -71,10 +71,10 @@ function set_prompt_symbol(){
 }
 
 function set_virtualenv () {
-  if test -z "$VIRTUAL_ENV" ; then
+  if test -z "$VIRTUAL_ENV_PROMPT" ; then
       PYTHON_VIRTUALENV=""
   else
-      PYTHON_VIRTUALENV="${BLUE}[`basename \"$VIRTUAL_ENV\"`]${COLOR_NONE} "
+      PYTHON_VIRTUALENV="${BLUE}[`basename \"$VIRTUAL_ENV_PROMPT\"`]${COLOR_NONE} "
   fi
 }
 
