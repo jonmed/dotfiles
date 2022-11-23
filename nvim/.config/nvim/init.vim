@@ -75,7 +75,6 @@ set mouse=a
 set noshowcmd
 set splitbelow
 set splitright
-set cmdheight=0
 
 " Search
 set ignorecase
