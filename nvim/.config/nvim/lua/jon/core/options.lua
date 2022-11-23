@@ -35,4 +35,3 @@ opt.wildignore:append("*/venv/*")
 
 -- System
 opt.clipboard:append("unnamedplus")
-
