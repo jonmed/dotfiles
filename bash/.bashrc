@@ -64,7 +64,7 @@ function set_git_branch(){
 
 function set_prompt_symbol(){
   if test $1 -eq 0 ; then
-    PROMPT_SYMBOL=""
+    PROMPT_SYMBOL="${LIGHT_GREEN}${COLOR_NONE}"
   else
     PROMPT_SYMBOL="${LIGHT_RED}${COLOR_NONE}"
   fi
