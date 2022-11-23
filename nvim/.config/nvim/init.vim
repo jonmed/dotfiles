@@ -89,9 +89,9 @@ set wildignorecase
 set clipboard+=unnamed,unnamedplus
 
 " Statusline
-lua << END
-require('lualine').setup()
-END
+"lua << END
+"require('lualine').setup()
+"END
 
 let s:diagnostics = 1
 
@@ -163,7 +163,7 @@ function! StatuslineGen(winid) abort
   return l:sl
 endfunction
 
-"set statusline=%!StatuslineGen(g:statusline_winid)
+set statusline=%!StatuslineGen(g:statusline_winid)
 
 " File Explorer
 lua require('nvim-tree').setup()
