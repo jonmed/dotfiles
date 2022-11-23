@@ -71,10 +71,10 @@ function set_prompt_symbol(){
 }
 
 function set_virtualenv () {
-  if test -z "$VIRTUAL_ENV_PROMPT" ; then
+  if test -z "$VIRTUAL_ENV" ; then
       PYTHON_VIRTUALENV=""
   else
-      PYTHON_VIRTUALENV="${BLUE}[`basename \"$VIRTUAL_ENV_PROMPT\"`]${COLOR_NONE} "
+      PYTHON_VIRTUALENV="${BLUE}[`basename \"$VIRTUAL_ENV\"`]${COLOR_NONE} "
   fi
 }
 
@@ -86,7 +86,7 @@ function set_bash_prompt(){
   set_git_branch
 
   PS1="
-${PYTHON_VIRTUAL_ENV}${GREEN}\w${COLOR_NONE}${BRANCH}
+${PYTHON_VIRTUALENV}${GREEN}\w${COLOR_NONE}${BRANCH}
 ${PROMPT_SYMBOL} "
 }
 
