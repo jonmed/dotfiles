@@ -58,6 +58,7 @@ function parse_git_branch(){
 }
 
 function set_git_branch(){
+  branch=$(parse_git_branch)
 }
 
 #PS1=$'\n\e[92m\]\ue0b6\e[30;102m\]\w\e[0m\]\e[92m\]\ue0b4\e[0m\]\n\e[1;$((91+!$?))m\]\e[0m\] '
