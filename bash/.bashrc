@@ -86,8 +86,8 @@ function set_bash_prompt(){
   set_git_branch
 
   PS1="
-  ${PYTHON_VIRTUAL_ENV}${GREEN}\w${COLOR_NONE}${BRANCH}
-  ${PROMPT_SYMBOL} "
+${PYTHON_VIRTUAL_ENV}${GREEN}\w${COLOR_NONE}${BRANCH}
+${PROMPT_SYMBOL} "
 }
 
 PROMPT_COMMAND=set_bash_prompt
