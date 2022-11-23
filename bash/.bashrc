@@ -62,6 +62,11 @@ function set_git_branch(){
   BRANCH="${PURPLE}${branch}${COLOR_NONE} "
 }
 
+function set_prompt_symbol(){
+  if test $1 -eq 0 ; then
+    PROMPT_SYMBOL="\$"
+}
+
 function set_bash_prompt(){
   set_prompt_symbol $?
 
