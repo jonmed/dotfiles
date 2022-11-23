@@ -90,7 +90,7 @@ let s:diagnostics = 1
 
 function! ToggleDiagnostic ()
   call CocAction('diagnosticToggle')
-  call CocCommand document.toggleInlayHint
+  execute 'CocCommand document.toggleInlayHint'
   let s:diagnostics = s:diagnostics==1 ? 0 : 1
 endfunction
 
