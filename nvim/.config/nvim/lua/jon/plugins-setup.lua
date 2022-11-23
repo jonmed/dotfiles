@@ -20,6 +20,7 @@ return packer.startup(function(use)
   use 'wbthomason/packer.nvim'
   use 'rebelot/kanagawa.nvim'
   use 'nvim-lua/plenary.nvim'
+  use 'nvim-tree/nvim-tree.lua'
 
   if packer_bootstrap then
     packer.sync()
