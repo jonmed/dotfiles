@@ -62,8 +62,16 @@ function set_git_branch(){
   BRANCH="${PURPLE}${branch}${COLOR_NONE} "
 }
 
+function set_bash_prompt(){
+  PS1="
+  ${PYTHON_VIRTUAL_ENV}${GREEN}\w${COLOR_NONE}${BRANCH}
+  ${PROMPT_SYMBOL} "
+}
+
+PROMPT_COMMAND=set_bash_prompt
+
 #PS1=$'\n\e[92m\]\ue0b6\e[30;102m\]\w\e[0m\]\e[92m\]\ue0b4\e[0m\]\n\e[1;$((91+!$?))m\]\e[0m\] '
-PS1=$'\n\e[1;30;102m\] \w \e[0m\]\e[92m\]\ue0bc\e[0m\]\n\e[1;$((91+!$?))m\]\e[0m\] '
+#PS1=$'\n\e[1;30;102m\] \w \e[0m\]\e[92m\]\ue0bc\e[0m\]\n\e[1;$((91+!$?))m\]\e[0m\] '
 
 PROMPT_DIRTRIM=3
 
