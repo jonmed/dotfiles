@@ -65,6 +65,16 @@ function set_git_branch(){
 function set_prompt_symbol(){
   if test $1 -eq 0 ; then
     PROMPT_SYMBOL="\$"
+  else
+    PROMPT_SYMBOL="${LIGHT_RED}\$${COLOR_NONE}"
+}
+
+function set_virtualenv () {
+  if test -z "$VIRTUAL_ENV" ; then
+      PYTHON_VIRTUALENV=""
+  else
+      PYTHON_VIRTUALENV="${BLUE}[`basename \"$VIRTUAL_ENV\"`]${COLOR_NONE} "
+  fi
 }
 
 function set_bash_prompt(){
