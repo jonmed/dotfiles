@@ -173,7 +173,7 @@ let g:mkdp_auto_close = 0
 
 " vimwiki
 let g:vimwiki_list = [{'path': '~/notes/', 'syntax': 'markdown', 'ext': '.md'}]
-let g:markdown_fenced_languages = ['c', 'c++', 'python', 'sh', 'json', 'css', 'html']
+let g:markdown_fenced_languages = ['c', 'c++', 'python', 'sh', 'json', 'css', 'html', 'php']
 
 " emmet
 let g:user_emmet_install_global = 0
