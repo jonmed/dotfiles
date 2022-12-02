@@ -184,7 +184,6 @@ autocmd FileType html,css EmmetInstall
 " coc settings
 set updatetime=300
 set shortmess+=c
-set signcolumn=number
 inoremap <silent><expr> <c-n> coc#pum#visible() ? coc#pum#next(1): coc#refresh()
 inoremap <silent><expr> <c-p> coc#pum#visible() ? coc#pum#prev(1): coc#refresh()
 
