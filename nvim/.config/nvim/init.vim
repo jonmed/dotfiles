@@ -96,19 +96,6 @@ set clipboard+=unnamed,unnamedplus
 "require('lualine').setup()
 "END
 
-let s:diagnostics = 1
-
-function! ToggleDiagnostic ()
-  call CocAction('diagnosticToggle')
-  execute 'CocCommand document.toggleInlayHint'
-  let s:diagnostics = s:diagnostics==1 ? 0 : 1
-endfunction
-
-function! Is_coc_diagnostic_enabled ()
-  let l:string = s:diagnostics==1 ? "%#SLDiagnostic#" : "%#StatuslineNC#"
-  return l:string . "\ \ "
-endfunction
-
 function! Dohi(name, fg, bg, gui)
   let l:string = a:name.' guifg='.a:fg.' guibg='.a:bg
   execute 'hi '.l:string.(a:gui==''?'':' gui='.a:gui)
@@ -116,15 +103,12 @@ endfunction
 
 let s:sumiInk0 = "#16161D"
 let s:old_white = "#C8C093"
-let s:spring_green = "#98BB6C"
-let s:winter_green = "#2B3328"
 let s:dragon_blue = "#658594"
 let s:spring_violet1 = "#938AA9"
 
 call Dohi('SLFile', s:old_white, s:sumiInk0, '')
 call Dohi('SLFileFormat', s:spring_violet1, s:sumiInk0, 'bold')
 call Dohi('SLBranch', s:dragon_blue, s:sumiInk0, 'bold')
-call Dohi('SLDiagnostic', s:spring_green, s:winter_green, '')
 
 " To insert result of vim command into buffer
 " :put=Exec('hi Statusline')
@@ -158,7 +142,6 @@ function! StatuslineGen(winid) abort
     let l:sl .= "\ %m%r\ "
     let l:sl .= "%#SLBranch#%{%b:git_branch%}\ "
     let l:sl .= "%=%#SLFileFormat#%{&ft}\ "
-    let l:sl .= "%{%Is_coc_diagnostic_enabled()%}"
     let l:sl .= "%#SLFile#\ \ %3l/%L\ :\ %-2v\ "
   else
     let l:sl .= "%<\ %f\ %m%r\ %{%b:git_branch%}"
