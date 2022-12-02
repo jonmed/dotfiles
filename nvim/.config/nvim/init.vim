@@ -1,9 +1,9 @@
 let mapleader = " "
+
 let g:plug_home = stdpath('data') . '/plugged'
 call plug#begin()
 Plug 'lewis6991/impatient.nvim'
 Plug 'dstein64/vim-startuptime'
-"Plug 'nathom/filetype.nvim'
 Plug 'rebelot/kanagawa.nvim'
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'kyazdani42/nvim-tree.lua'
