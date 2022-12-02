@@ -2,5 +2,6 @@
   "diagnostic.virtualText": true,
   "diagnostic.virtualTextLines": 1,
   "diagnostic.floatConfig": {"border":true},
-  "suggest.noselect": true 
+  "suggest.noselect": true,
+  "python.analysis.typeCheckingMode": "off"
 }
