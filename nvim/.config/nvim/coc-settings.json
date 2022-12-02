@@ -4,5 +4,5 @@
   "diagnostic.floatConfig": {"border":true},
   "suggest.noselect": true,
   "python.analysis.typeCheckingMode": "off",
-  "pyright.inlayHints.enabled" = false
+  "pyright.inlayHints.enabled": false
 }
