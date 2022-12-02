@@ -28,6 +28,7 @@ Plug 'samoshkin/vim-mergetool'
 Plug 'AndrewRadev/linediff.vim'
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'kyazdani42/nvim-web-devicons'
+Plug 'fladson/vim-kitty'
 call plug#end()
 
 " Speed up startup
