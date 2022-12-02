@@ -32,9 +32,7 @@ Plug 'norcalli/nvim-colorizer.lua'
 call plug#end()
 
 " Speed up startup
-lua << EOF
-require('impatient')
-EOF
+lua require('impatient')
 set history=100
 " look up how to disable selected default plugins
 if has("win32") || has("wsl")
