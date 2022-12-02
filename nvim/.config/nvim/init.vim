@@ -39,16 +39,9 @@ set history=100
 " look up how to disable selected default plugins
 if has("win32") || has("wsl")
   let g:clipboard = {
-\   'name': 'win32yank',
-\   'copy': {
-\      '+': 'win32yank.exe -i --crlf',
-\      '*': 'win32yank.exe -i --crlf',
-\    },
-\   'paste': {
-\      '+': 'win32yank.exe -o --lf',
-\      '*': 'win32yank.exe -o --lf',
-\   },
-\   'cache_enabled': 1,
+\   'name': 'win32yank', 'cache_enabled': 1,
+\   'copy': { '+': 'win32yank.exe -i --crlf', '*': 'win32yank.exe -i --crlf', },
+\   'paste': { '+': 'win32yank.exe -o --lf', '*': 'win32yank.exe -o --lf', },
 \ }
 endif
 
