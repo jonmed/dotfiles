@@ -1,24 +1,3 @@
-" Speed up startup
-lua << EOF
-require('impatient')
-EOF
-set history=100
-" look up how to disable selected default plugins
-if has("win32") || has("wsl")
-  let g:clipboard = {
-\   'name': 'win32yank',
-\   'copy': {
-\      '+': 'win32yank.exe -i --crlf',
-\      '*': 'win32yank.exe -i --crlf',
-\    },
-\   'paste': {
-\      '+': 'win32yank.exe -o --lf',
-\      '*': 'win32yank.exe -o --lf',
-\   },
-\   'cache_enabled': 1,
-\ }
-endif
-
 let mapleader = " "
 let g:plug_home = stdpath('data') . '/plugged'
 call plug#begin()
@@ -53,6 +32,26 @@ Plug 'fladson/vim-kitty'
 Plug 'norcalli/nvim-colorizer.lua'
 call plug#end()
 
+" Speed up startup
+lua << EOF
+require('impatient')
+EOF
+set history=100
+" look up how to disable selected default plugins
+if has("win32") || has("wsl")
+  let g:clipboard = {
+\   'name': 'win32yank',
+\   'copy': {
+\      '+': 'win32yank.exe -i --crlf',
+\      '*': 'win32yank.exe -i --crlf',
+\    },
+\   'paste': {
+\      '+': 'win32yank.exe -o --lf',
+\      '*': 'win32yank.exe -o --lf',
+\   },
+\   'cache_enabled': 1,
+\ }
+endif
 
 " Colors
 set termguicolors
