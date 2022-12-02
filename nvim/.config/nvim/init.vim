@@ -26,7 +26,6 @@ Plug 'rcarriga/nvim-dap-ui'
 Plug 'mattn/emmet-vim'
 Plug 'samoshkin/vim-mergetool'
 Plug 'AndrewRadev/linediff.vim'
-Plug 'nvim-lualine/lualine.nvim'
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'fladson/vim-kitty'
 Plug 'norcalli/nvim-colorizer.lua'
@@ -92,10 +91,6 @@ set wildignorecase
 set clipboard+=unnamed,unnamedplus
 
 " Statusline
-"lua << END
-"require('lualine').setup()
-"END
-
 function! Dohi(name, fg, bg, gui)
   let l:string = a:name.' guifg='.a:fg.' guibg='.a:bg
   execute 'hi '.l:string.(a:gui==''?'':' gui='.a:gui)
