@@ -29,6 +29,7 @@ Plug 'AndrewRadev/linediff.vim'
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'fladson/vim-kitty'
+Plug 'norcalli/nvim-colorizer.lua'
 call plug#end()
 
 " Speed up startup
