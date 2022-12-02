@@ -48,7 +48,7 @@ endif
 " Colors
 set termguicolors
 colorscheme kanagawa
-hi! VertSplit guifg=#363646 guibg=#1F1F28
+"hi! VertSplit guifg=#363646 guibg=#1F1F28
 hi! Visual gui=reverse
 
 " Files
