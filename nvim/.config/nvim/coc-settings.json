@@ -3,5 +3,6 @@
   "diagnostic.virtualTextLines": 1,
   "diagnostic.floatConfig": {"border":true},
   "suggest.noselect": true,
-  "python.analysis.typeCheckingMode": "off"
+  "python.analysis.typeCheckingMode": "off",
+  "pyright.inlayHints.enabled" = false
 }
