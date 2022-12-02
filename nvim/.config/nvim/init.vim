@@ -328,6 +328,9 @@ endfunction
 
 let g:MergetoolSetLayoutCallback = function('s:on_mergetool_set_layout')
 
+" colorizer
+lua require('colorizer').setup()
+
 " General remaps
 noremap <leader>d "_d
 nnoremap x "_x
