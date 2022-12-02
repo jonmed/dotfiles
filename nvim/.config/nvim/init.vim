@@ -75,6 +75,8 @@ set mouse=a
 set noshowcmd
 set splitbelow
 set splitright
+set number
+set signcolumn=yes
 
 " Search
 set ignorecase
