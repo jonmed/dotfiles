@@ -40,3 +40,6 @@ fi
 
 # Go
 export PATH=$PATH:/usr/local/go/bin
+
+# Rust
+export PATH=$PATH:$HOME/.cargo/bin
