@@ -278,8 +278,8 @@ nnoremap <silent> <leader>di :lua require('dap.ui.widgets').hover()<cr>
 nnoremap <silent> <leader>d, :lua local widgets=require('dap.ui.widgets');widgets.centered_float(widgets.scopes)<cr>
 
 " lens
-" let g:lens#disabled = 1
-" nnoremap <silent> <leader>l :call lens#toggle()<cr>
+let g:lens#disabled = 1
+nnoremap <silent> <leader>l :call lens#toggle()<cr>
 
 " vim_mergetool
 let g:mergetool_layout = 'mr,b'
