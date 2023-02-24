@@ -298,6 +298,10 @@ let g:MergetoolSetLayoutCallback = function('s:on_mergetool_set_layout')
 lua require('colorizer').setup()
 
 " General remaps
+
+" Search for whitespace
+
+nnoremap <leader>sw /\s\+$<cr>
 noremap <leader>d "_d
 nnoremap x "_x
 nnoremap c "_c
