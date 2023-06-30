@@ -196,6 +196,7 @@ require('nvim-treesitter.configs').setup {
   ensure_installed = { "norg", --[[ other parsers you would wish to have ]] },
   highlight = { -- Be sure to enable highlights if you haven't!
     enable = true,
+    additional_vim_regex_highlighting = false,
   }
 }
 require('treesitter-context').setup()
@@ -223,6 +224,7 @@ table.insert(require('dap').configurations.python, {
   request = 'attach',
   port = 5678,
   host = 'localhost',
+  justMyCode = false,
   pathMappings = {{
     localRoot = vim.fn.getcwd();
     remoteRoot = ".";
@@ -265,16 +267,16 @@ nnoremap <silent> <S-F5> :lua require'dap'.terminate()<cr>
 nnoremap <silent> <F9> :lua require'dap'.toggle_breakpoint()<cr>
 nnoremap <silent> <leader><F9> :lua require'dap'.set_breakpoint(vim.fn.input('Breackpoint condition: '))<cr>
 nnoremap <silent> <S-F9> :lua require'dap'.clear_breakpoints()<cr>
-nnoremap <silent> <F10> :lua require'dap'.step_over()<cr>
-nnoremap <silent> <F11> :lua require'dap'.step_into()<cr>
-nnoremap <silent> <S-F11> :lua require'dap'.step_out()<cr>
+nnoremap <silent> <leader>ds :lua require'dap'.step_over()<cr>
+nnoremap <silent> <leader>di :lua require'dap'.step_into()<cr>
+nnoremap <silent> <leader>do :lua require'dap'.step_out()<cr>
 nnoremap <silent> <leader>dr :lua require'dap'.repl.toggle({}, 'vsplit')<cr><c-w>l
 nnoremap <silent> <leader>dk :lua require'dap'.up()<cr>
 nnoremap <silent> <leader>dj :lua require'dap'.down()<cr>
 nnoremap <leader>df <cmd>Telescope dap frames theme=ivy<cr>
 nnoremap <leader>db <cmd>Telescope dap list_breakpoints theme=ivy<cr>
 nnoremap <silent> <leader>dq :lua require('dapui').toggle()<cr>
-nnoremap <silent> <leader>di :lua require('dap.ui.widgets').hover()<cr>
+nnoremap <silent> <leader>dw :lua require('dap.ui.widgets').hover()<cr>
 nnoremap <silent> <leader>d, :lua local widgets=require('dap.ui.widgets');widgets.centered_float(widgets.scopes)<cr>
 
 " lens
@@ -302,7 +304,6 @@ lua require('colorizer').setup()
 " Search for whitespace
 
 nnoremap <leader>sw /\s\+$<cr>
-noremap <leader>d "_d
 nnoremap x "_x
 nnoremap c "_c
 

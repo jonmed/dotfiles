@@ -120,7 +120,8 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 # ~/.bash_aliases, instead of adding them here directly.
 # See /usr/share/doc/bash-doc/examples in the bash-doc package.
 
-alias vim='nvim'
+alias vim='NVIM_APPNAME=NvChad nvim'
+alias vim-astro='NVIM_APPNAME=AstroNvim nvim'
 alias wts='nvim /mnt/c/Users/jon/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json'
 alias penv='source venv/bin/activate'
 alias suap='cd ~/suap/suap-uepb; source venv/bin/activate'
